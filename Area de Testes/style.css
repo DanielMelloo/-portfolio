@@ -19,3 +19,8 @@ svg {
     stroke-dashoffset: 0;
   }
 }
+
+
+.body{
+  flex-direction: column;
+}

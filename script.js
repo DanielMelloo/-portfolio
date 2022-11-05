@@ -25,3 +25,18 @@ const toggleButton = document.querySelector('.dark-light');
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
 });
+
+
+
+function ativaNoScroll() {
+
+	document.querySelectorAll('img').forEach((img, index) => {
+		if(img.getBoundingClientRect().top < window.innerHeight) {
+			img.src = img.getAttribute('data-src');
+		};
+	})
+
+}
+
+
+window.addEventListener('scroll', ativaNoScroll);
