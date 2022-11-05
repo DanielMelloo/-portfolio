@@ -411,6 +411,20 @@ body.light-mode .video-bg:before {
   }
 }
 
+.content-button {
+  background-color: #3a6df0;
+  border: none;
+  padding: 8px 26px;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+  display: flex;
+  text-decoration: none;
+
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   border-radius: 10px;
@@ -420,3 +434,30 @@ body.light-mode .video-bg:before {
   background: var(--scrollbar-bg);
   border-radius: 10px;
 }
+
+.link-buttons {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 8px;
+  display: flex;
+  text-decoration: none;
+
+}
+
+.icons {
+  padding: 0px;
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-flex;
+
+}
+
+.menu-bar {
+  display: flex;
+}
+
+.content-button:not(.open):hover {
+    background: #1e59f1;
+  }
