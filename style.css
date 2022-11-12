@@ -163,7 +163,6 @@ body.light-mode .video-bg:before {
   font-weight: 500;
 }
 
-
 .header {
   display: flex;
   align-items: center;
@@ -320,7 +319,7 @@ body.light-mode .video-bg:before {
   align-items: center;
   border-bottom: 1px solid var(--border-color);
   height: 58px;
-  flex-shrink: 0;
+  flex-shrink: 0; 
 }
 
 .main-header .header-menu {
@@ -368,6 +367,7 @@ body.light-mode .video-bg:before {
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-bg);
   border-radius: 10px;
+  margin-bottom: 10px;
 
 }
 
@@ -415,6 +415,30 @@ body.light-mode .video-bg:before {
 
 }
 
+.main-contentP{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  scroll-behavior: smooth;
+  
+  width: auto;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  flex-grow: 1;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-basis: 240px;
+  overflow: hidden;
+  overflow: auto;
+  scroll-behavior: smooth;
+
+}
+
+
 .img-content{
   margin-bottom:50px;
   
@@ -442,7 +466,6 @@ section{
   place-items: center;
   min-height: 20vh;
   margin: 20vh;
-  
 }
 
 .hidden{
@@ -487,23 +510,41 @@ section{
   }
 }
 
-@media (max-width: 425px) {
-  .root{
-    background-color: #333333;
+@media screen and (max-width: 980px) {
+  .main-header{
+    width: 100%;
+    justify-content: center;
+    /* align-items: center; */
+    align-content:flex-end ;
+    display: inline;
+    flex-direction:row;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  body{
+    max-height: 90vh;
+  }
+
+  .app{
+    max-height: 90vh;
+    border-radius: 80px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .header {
-    padding: 0 16px;
-  }
-}
 @media screen and (max-width: 480px) {
   body {
     padding: 0.8em;
     display: none;  
   }
+
+  .header {
+    padding: 0 16px;
+  }
 }
+
 @media screen and (max-width: 610px) {
   .header-menu a:not(.main-header-link) {
     display: none;
@@ -511,14 +552,11 @@ section{
 }
 
 @media screen and (max-width: 945px) {
-  .menu-circle {
+  .left-side {
     display: none;
   }
 
-
-}
-@media screen and (max-width: 945px) {
-  .left-side {
+  .menu-circle {
     display: none;
   }
 }
@@ -527,9 +565,7 @@ section{
   .menu-link-main {
     display: none;
   }
-}
 
-@media screen and (max-width: 1055px) {
   .main-header .header-menu {
     margin: auto;
   }
