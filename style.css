@@ -335,6 +335,7 @@ body.light-mode .video-bg:before {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  scroll-behavior: smooth;
 }
 
 .menu-link-main {
@@ -410,6 +411,7 @@ body.light-mode .video-bg:before {
   border-right: 1px solid var(--border-color);
   overflow: auto;
   flex-shrink: 0;
+  scroll-behavior: smooth;
 
 }
 
