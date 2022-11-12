@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.light-mode .pop-up__title {
+  border-color: var(--theme-color);
+}
+
 :root {
   --theme-bg-color: rgba(16 18 27 / 40%);
   --border-color: rgba(113 119 144 / 25%);
@@ -17,9 +21,11 @@
   --button-inactive: rgb(249 250 251 / 55%);
   --dropdown-bg: #21242d;
   --dropdown-hover: rgb(42 46 60);
+  --popup-bg: rgb(22 25 37);
   --search-bg: #14162b;
   --overlay-bg: rgba(36, 39, 59, 0.3);
   --scrollbar-bg: rgb(1 2 3 / 40%);
+
   --section-bg-dark: rgba(0, 0, 0, 0.5);
 }
 
@@ -32,9 +38,11 @@
   --dropdown-bg: #f7f7f7;
   --overlay-bg: rgb(255 255 255 / 30%);
   --dropdown-hover: rgb(236 236 236);
+  --popup-bg: rgb(255 255 255);
   --border-color: rgb(255 255 255 / 35%);
   --hover-menu-bg: rgba(255 255 255 / 35%);
   --scrollbar-bg: rgb(255 253 253 / 57%);
+  --content-title-color: var(--theme-color);
   --section-bg:rgba(250, 250, 250, 0.4)
 
   /* --content-title-color: --theme-color;  */
@@ -85,11 +93,8 @@ img {
   padding: 0 16px 0 40px;
   margin-left: auto;
   flex-shrink: 0;
-
   
-  /* position: fixed;
-   bottom: 50px;
-  right: 30px; */
+
   background-color: var(--dropdown-bg);
   box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.2);
   padding: 8px;
@@ -157,6 +162,7 @@ body.light-mode .video-bg:before {
   font-size: 15px;
   font-weight: 500;
 }
+
 
 .header {
   display: flex;
@@ -253,11 +259,12 @@ body.light-mode .video-bg:before {
   box-shadow: 0 0 0 1px var(--border-color);
   padding-left: 0;
 }
+.header .search-bar{
 
-.wide .menu-circle {
-  margin-right: 0;
+  margin: auto;
+  transition: 0.4s;
+
 }
-
 .wrapper {
   display: flex;
   flex-grow: 1;
@@ -353,13 +360,14 @@ body.light-mode .video-bg:before {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-bg);
   border-radius: 10px;
+
 }
 
 .link-buttons {
@@ -454,17 +462,23 @@ section{
   }
 }
 
+@media (max-width: 425px) {
+  .root{
+    background-color: #333333;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .header {
     padding: 0 16px;
   }
-
+}
+@media screen and (max-width: 480px) {
   body {
     padding: 0.8em;
     display: none;  
   }
 }
-
 @media screen and (max-width: 610px) {
   .header-menu a:not(.main-header-link) {
     display: none;
@@ -476,24 +490,23 @@ section{
     display: none;
   }
 
+
+}
+@media screen and (max-width: 945px) {
   .left-side {
     display: none;
   }
 }
 
+
 @media screen and (max-width: 1055px) {
   .menu-link-main {
     display: none;
   }
+}
 
+@media screen and (max-width: 1055px) {
   .main-header .header-menu {
     margin: auto;
   }
-}
-
-@media (max-width: 425px) {
-  .root{
-    background-color: #333333;
-  }
-  
 }
