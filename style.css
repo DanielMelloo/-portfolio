@@ -559,10 +559,10 @@ section{
     display: inline;
     flex-direction:row;
   }
-
+/* 
   .hidden{
     display: none;
-  }
+  } */
 
   body{
     max-height: 90vh;
