@@ -49,7 +49,6 @@ window.addEventListener('scroll', ativaNoScroll);
 
 const observer = new IntersectionObserver ((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting){
       // entry.target.classList.add('principal-show-section');
       entry.target.classList.add('show');
@@ -91,4 +90,68 @@ $(document).ready(function(){
       });
     } 
   });
+});
+
+
+$('#hoverOn1').mouseover(function(){
+  // obj=document.getElementById()
+  $('#description0').css('display', 'none');
+  $('#description1').css('display', 'block');
+});
+
+$('#hoverOn1').mouseout(function(){
+  $('#description1').css('display', 'none');
+  $('#description0').css('display', 'block');
+});
+
+
+
+$('#hoverOn2').mouseover(function(){
+  // obj=document.getElementById()
+  $('#description0').css('display', 'none');
+  $('#description2').css('display', 'block');
+});
+
+$('#hoverOn2').mouseout(function(){
+  $('#description2').css('display', 'none');
+  $('#description0').css('display', 'block');
+});
+
+
+
+$('#hoverOn3').mouseover(function(){
+  // obj=document.getElementById()
+  $('#description0').css('display', 'none');
+  $('#description3').css('display', 'block');
+});
+
+$('#hoverOn3').mouseout(function(){
+  $('#description3').css('display', 'none');
+  $('#description0').css('display', 'block');
+});
+
+
+
+$('#hoverOn4').mouseover(function(){
+  // obj=document.getElementById()
+  $('#description0').css('display', 'none');
+  $('#description4').css('display', 'block');
+});
+
+$('#hoverOn4').mouseout(function(){
+  $('#description4').css('display', 'none');
+  $('#description0').css('display', 'block');
+});
+
+
+
+$('#hoverOn5').mouseover(function(){
+  // obj=document.getElementById()
+  $('#description0').css('display', 'none');
+  $('#description5').css('display', 'block');
+});
+
+$('#hoverOn5').mouseout(function(){
+  $('#description5').css('display', 'none');
+  $('#description0').css('display', 'block');
 });
