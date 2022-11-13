@@ -468,14 +468,15 @@ section{
 
   margin: 20vh;
   margin-top: 0;
-  margin-bottom: 30vh;
+  margin-bottom: 20vh;
 
 }
 
 .title-section{
   margin-top: 0;
-  margin-bottom: 55vh;
-  padding-top: 22vh;
+  margin-bottom: 30vh;
+  padding-top: 23vh;
+  padding-bottom: 23vh;
   
 }
 
@@ -559,10 +560,10 @@ section{
     display: inline;
     flex-direction:row;
   }
-/* 
+
   .hidden{
     display: none;
-  } */
+  } 
 
   body{
     max-height: 90vh;
