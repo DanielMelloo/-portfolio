@@ -438,9 +438,39 @@ body.light-mode .video-bg:before {
 
 }
 
-.img-content{
-  margin-bottom:50px;
+.soon{
+  /* height: 10vh; */
+  padding: 4vh;
+  width: 55vh;
+
+  background-color: var(--theme-bg-color);
+  color: var(--theme-color);
+
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
   
+  transform: rotate(-30deg);
+}
+
+.img-content{
+  overflow: hidden;
+
+  margin-bottom:50px;
+  background-color: var(--theme-bg-color);
+  width: 50%;
+  height: 40vh;
+  border-radius: 20px;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+}
+
+.img-src-project{
+  border-radius: 20px;
 }
 
 .section-contents{
