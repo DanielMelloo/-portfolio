@@ -317,13 +317,13 @@ body.light-mode .video-bg:before {
 .main-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   border-bottom: 1px solid var(--border-color);
   height: 58px;
-  flex-shrink: 0; 
 }
 
 .main-header .header-menu {
-  margin-left: 150px;
+  /* margin-left: 150px; */
 }
 
 .main-header .header-menu a {
@@ -438,7 +438,6 @@ body.light-mode .video-bg:before {
 
 }
 
-
 .img-content{
   margin-bottom:50px;
   
@@ -465,12 +464,24 @@ section{
   display: grid;
   place-items: center;
   min-height: 20vh;
+  max-width: fit-content;
+
   margin: 20vh;
+  margin-top: 0;
+  margin-bottom: 30vh;
+
+}
+
+.title-section{
+  margin-top: 0;
+  margin-bottom: 55vh;
+  padding-top: 22vh;
+  
 }
 
 .hidden{
   opacity: 0;
-   filter: blur(5px);
+  filter: blur(5px);
   transform: translateX(-100%); 
   transition: all 1s;
 }
@@ -480,6 +491,7 @@ section{
   filter: blur(0);
   transform: translateX(0);
 }
+
 .hab-logos{
   width: 100%;
   display: flex;
@@ -489,19 +501,23 @@ section{
 }
 
 .logo{
-  padding: 10px;
+  /* padding: 10px; */
 }
 
-.logo:nth-child(2){
+.logo:nth-child(1){
   transition-delay: 200ms;
 }
 
-.logo:nth-child(3){
+.logo:nth-child(2){
   transition-delay: 400ms;
 }
 
-.logo:nth-child(4){
+.logo:nth-child(3){
   transition-delay: 600ms;
+}
+
+.logo:nth-child(4){
+  transition-delay: 800ms;
 }
 
 @media (prefers-reduced-motion){
