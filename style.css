@@ -657,10 +657,10 @@ section{
 
 
 
-.main-header-link.main-header-link:not(.button)[aria-current]:not([aria-current=""]):not([aria-current=false]) {
-  background-color: #5fcf65;
+/* .main-header-link.main-header-link:not(.button)[aria-current]:not([aria-current=""]):not([aria-current=false]) { */
+  /* background-color: #5fcf65; */
   /* background-color: var(--background-toc-active);
   border-left: 2px solid var(--category-color);
   color: var(--text-primary);
   font-weight: 600; */
-}
+/* } */

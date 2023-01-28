@@ -23,10 +23,37 @@ $(".search-bar input")
     $(".header").removeClass("wide");
   });
 
+
+
+// =============== //
+// Light-Dark Mode //
+// =============== //
+
 const toggleButton = document.querySelector('.dark-light');
 
+if (localStorage.getItem ('lightMode') == 1){
+    document.body.classList.add('light-mode');
+}
+
+else if (localStorage.getItem ('lightMode') == 0){
+    document.body.classList.remove('light-mode');
+}
+
 toggleButton.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
+    
+    if (localStorage.getItem ('lightMode') == 1){
+
+        localStorage.setItem("lightMode", 0);
+        
+        document.body.classList.toggle('light-mode');
+    }
+    
+    else if (localStorage.getItem ('lightMode') == 0){
+        
+        localStorage.setItem("lightMode", 1);
+
+        document.body.classList.toggle('light-mode');
+    }
 });
 
 
@@ -46,9 +73,9 @@ function ativaNoScroll() {
 
 window.addEventListener('scroll', ativaNoScroll);
 
-
-// Show section
-
+// ============ //
+// Show section //
+// ============ //
 
 const observer = new IntersectionObserver ((entries) => {
   entries.forEach((entry) => {
@@ -120,5 +147,3 @@ function resetText (elementHoverOff){
     elementToDisplayOff.setAttribute('style', 'display: none');
     description0.setAttribute ('style', 'display: block');
 }
-
-    
