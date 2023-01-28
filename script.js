@@ -1,3 +1,6 @@
+
+
+
 $(function () {
   $(".menu-link").click(function () {
     $(".menu-link").removeClass("is-active");
@@ -71,8 +74,6 @@ hiddenSection.forEach((el) => observer.observe(el));
 // Scroll To View //
 // ============== //
 
-  
-document.documentElement.style.scrollBehavior = "smooth";
 
 $(document).ready(function(){
   $("a").on('click', function(event) {
@@ -93,65 +94,31 @@ $(document).ready(function(){
 });
 
 
-$('#hoverOn1').mouseover(function(){
-  // obj=document.getElementById()
-  $('#description0').css('display', 'none');
-  $('#description1').css('display', 'block');
-});
 
-$('#hoverOn1').mouseout(function(){
-  $('#description1').css('display', 'none');
-  $('#description0').css('display', 'block');
-});
+// ================== //
+// Hover to View Text //
+// ================== //
 
 
 
-$('#hoverOn2').mouseover(function(){
-  // obj=document.getElementById()
-  $('#description0').css('display', 'none');
-  $('#description2').css('display', 'block');
-});
-
-$('#hoverOn2').mouseout(function(){
-  $('#description2').css('display', 'none');
-  $('#description0').css('display', 'block');
-});
+let description0 = document.getElementById ('description0');
 
 
+function showText (elementHover) {
+    let id = parseInt(elementHover.id.slice(7), 10);
+    let elementToDisplay = document.getElementById ('description' + id);
 
-$('#hoverOn3').mouseover(function(){
-  // obj=document.getElementById()
-  $('#description0').css('display', 'none');
-  $('#description3').css('display', 'block');
-});
-
-$('#hoverOn3').mouseout(function(){
-  $('#description3').css('display', 'none');
-  $('#description0').css('display', 'block');
-});
+    elementToDisplay.setAttribute('style', 'display: block');
+    description0.setAttribute ('style', 'display: none');
+}
 
 
+function resetText (elementHoverOff){
+    let id = parseInt(elementHoverOff.id.slice(7), 10);
+    let elementToDisplayOff = document.getElementById ('description' + id);
 
-$('#hoverOn4').mouseover(function(){
-  // obj=document.getElementById()
-  $('#description0').css('display', 'none');
-  $('#description4').css('display', 'block');
-});
+    elementToDisplayOff.setAttribute('style', 'display: none');
+    description0.setAttribute ('style', 'display: block');
+}
 
-$('#hoverOn4').mouseout(function(){
-  $('#description4').css('display', 'none');
-  $('#description0').css('display', 'block');
-});
-
-
-
-$('#hoverOn5').mouseover(function(){
-  // obj=document.getElementById()
-  $('#description0').css('display', 'none');
-  $('#description5').css('display', 'block');
-});
-
-$('#hoverOn5').mouseout(function(){
-  $('#description5').css('display', 'none');
-  $('#description0').css('display', 'block');
-});
+    

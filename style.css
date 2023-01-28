@@ -188,7 +188,15 @@ body.light-mode .video-bg:before {
 }
 
 .header-menu a.is-active,
-.header-menu a:hover {
+.header-menu a:hover, 
+.header-menu a:focus  {
+  color: var(--theme-color);
+  border-bottom: 2px solid var(--theme-color);
+}
+
+
+
+.header-menu a::placeholder {
   color: var(--theme-color);
   border-bottom: 2px solid var(--theme-color);
 }
@@ -564,6 +572,7 @@ section{
 .subsection{
   margin: 5vh;
   display: none;
+  transition: 1s;
 }
 
 #description{
@@ -640,4 +649,18 @@ section{
   .main-header .header-menu {
     margin: auto;
   }
+}
+
+/* #aboutme:target{
+  background-color: #5fcf65;
+} */
+
+
+
+.main-header-link.main-header-link:not(.button)[aria-current]:not([aria-current=""]):not([aria-current=false]) {
+  background-color: #5fcf65;
+  /* background-color: var(--background-toc-active);
+  border-left: 2px solid var(--category-color);
+  color: var(--text-primary);
+  font-weight: 600; */
 }

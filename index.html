@@ -6,7 +6,6 @@
   <title>Daniel Mello</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./style.css">
-  <!-- <link rel="icon" href="/icons/eng-icon-circle.png" type="image/x-icon"> -->
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
 
 </head>
@@ -85,13 +84,13 @@
               Redes Sociais
             </a>
 
-            <a href="Area de Testes/paginaDeTestes.html">
+            <!-- <a href="Area de Testes/paginaDeTestes.html">
               Página de Testes
             </a>
 
             <a href="Area de Testes/pgtstint.html">
               Pg de Testes integrada
-            </a>
+            </a> -->
 
           </div>
         </div>
@@ -100,9 +99,9 @@
         <div class="main-header">
           <!-- <a class="menu-link-main" href="#">Página Inicial</a>-->
           <div class="header-menu">
-            <a class="main-header-link is-active" scroll-behavior="smooth" href="#intro">Introdução</a>
-            <a class="main-header-link" href="#aboutme">Sobre Mim</a>
-            <a class="main-header-link" href="#habilities">Habilidades</a>
+            <a class="main-header-link is-active" scroll-behavior="smooth" href="#intro" aria-current="true">Introdução</a>
+            <a class="main-header-link" href="#aboutme" aria-current="false">Sobre Mim</a>
+            <a class="main-header-link" href="#habilities" aria-current="false">Habilidades</a>
           </div>
         </div>
 
@@ -152,24 +151,24 @@
             <div class="section-contents">
               <h1>Minhas Habilidades</h1>
               <p></p>
-              <div class="hab-logos">
-                <div class="logo hidden" id="hoverOn1">
+              <div class="hab-logos" is="habConteiner">
+                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn1">
                   <img id="html5logo" src="https://icongr.am/devicon/html5-original.svg?size=100&color=ffffff">
                 </div>
 
-                <div class="logo hidden" id="hoverOn2">
+                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn2">
                   <img id="css3logo" src="https://icongr.am/devicon/css3-original.svg?size=100&color=ffffff">
                 </div>
 
-                <div class="logo hidden" id="hoverOn3">
+                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn3">
                   <img id="jslogo" src="https://icongr.am/devicon/javascript-original.svg?size=100&color=ffffff">
                 </div>
 
-                <div class="logo hidden" id="hoverOn4">
+                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn4">
                   <img id="cpplogo" src="https://icongr.am/devicon/cplusplus-original.svg?size=100&color=002aff">
                 </div>
 
-                <div class="logo hidden" id="hoverOn5">
+                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn5">
 
                   <svg style="width: 100px" style="height: 100px;" id="pythonlogo" viewBox="0 0 128 128">
                     <linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" 
@@ -282,3 +281,4 @@
 </body>
 
 </html>
+
