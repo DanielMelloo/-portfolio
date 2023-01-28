@@ -33,10 +33,12 @@ const toggleButton = document.querySelector('.dark-light');
 
 if (localStorage.getItem ('lightMode') == 1){
     document.body.classList.add('light-mode');
+    alert ('light')
 }
 
 else if (localStorage.getItem ('lightMode') == 0){
     document.body.classList.remove('light-mode');
+    alert ('dark')
 }
 
 toggleButton.addEventListener('click', () => {
@@ -46,6 +48,8 @@ toggleButton.addEventListener('click', () => {
         localStorage.setItem("lightMode", 0);
         
         document.body.classList.toggle('light-mode');
+        alert ('dark')
+        
     }
     
     else if (localStorage.getItem ('lightMode') == 0){
@@ -53,6 +57,7 @@ toggleButton.addEventListener('click', () => {
         localStorage.setItem("lightMode", 1);
 
         document.body.classList.toggle('light-mode');
+        alert ('light')
     }
 });
 
