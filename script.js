@@ -27,39 +27,73 @@ $(".search-bar input")
 
 // =============== //
 // Light-Dark Mode //
+
 // =============== //
 
-const toggleButton = document.querySelector('.dark-light');
+// const toggleButton = document.querySelector('.dark-light');
 
 if (localStorage.getItem ('lightMode') == 1){
+
     document.body.classList.add('light-mode');
-    alert ('light')
+
+    // document.body.classList.toggle('light-mode');
+    // alert ('light')
 }
 
 else if (localStorage.getItem ('lightMode') == 0){
+
     document.body.classList.remove('light-mode');
-    alert ('dark')
+
+    // document.body.classList.toggle('light-mode');
+    // alert ('dark')
 }
 
-toggleButton.addEventListener('click', () => {
-    
+function toggleButtonFunc (){
+
     if (localStorage.getItem ('lightMode') == 1){
-
         localStorage.setItem("lightMode", 0);
-        
-        document.body.classList.toggle('light-mode');
-        alert ('dark')
-        
-    }
-    
-    else if (localStorage.getItem ('lightMode') == 0){
-        
-        localStorage.setItem("lightMode", 1);
 
-        document.body.classList.toggle('light-mode');
-        alert ('light')
+        document.body.classList.remove('light-mode');
+
+        console.log ('dark')
+
+        // document.body.classList.toggle('light-mode');
     }
-});
+
+    else if (localStorage.getItem ('lightMode') == 0){
+
+        localStorage.setItem("lightMode", 1);
+        
+        document.body.classList.add('light-mode');
+        
+        console.log ('light')
+
+        // document.body.classList.toggle('light-mode');
+    }    
+}
+
+
+
+
+// toggleButton.addEventListener('click', () => {
+    
+//     if (localStorage.getItem ('lightMode') == 1){
+
+//         localStorage.setItem("lightMode", 0);
+        
+//         document.body.classList.toggle('light-mode');
+//         alert ('dark')
+        
+//     }
+    
+//     else if (localStorage.getItem ('lightMode') == 0){
+        
+//         localStorage.setItem("lightMode", 1);
+
+//         document.body.classList.toggle('light-mode');
+//         alert ('light')
+//     }
+// });
 
 
 // ================= //
