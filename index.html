@@ -2,91 +2,98 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Daniel Mello</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta charset="UTF-8">
+    <title>Daniel Mello</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+    <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js'></script>
 </head>
 
 <body>
-  <div class="video-bg">
-    <video width="320" height="240" autoplay loop muted>
-      <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="app">
-    <div class="header">
-      <div class="menu-circle"></div>
-      <div class="header-menu">
-        <a class="menu-link is-active" href="#">Página Inicial </a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Pesquisar">
-      </div>
-      <div loading="lazy" class="dark-light" onclick="toggleButtonFunc ()">
-        <svg loading="lazy" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-        </svg>
-      </div>
 
-    </div>
-    <div class="wrapper">
-      <div class="left-side">
-        <div class="side-wrapper">
-          <div class="side-title">Principais</div>
-          <div class="side-menu">
-            <a href="index.html">
-              <svg viewBox="0 0 512 512">
-                <g xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                  <path d="M0 0h128v128H0zm0 0M192 0h128v128H192zm0 0M384 0h128v128H384zm0 0M0 192h128v128H0zm0 0"
-                    data-original="#bfc9d1" />
-                </g>
-                <path xmlns="http://www.w3.org/2000/svg" d="M192 192h128v128H192zm0 0" fill="currentColor"
-                  data-original="#82b1ff" />
-                <path xmlns="http://www.w3.org/2000/svg"
-                  d="M384 192h128v128H384zm0 0M0 384h128v128H0zm0 0M192 384h128v128H192zm0 0M384 384h128v128H384zm0 0"
-                  fill="currentColor" data-original="#bfc9d1" />
-              </svg>
-              Página Inicial
-            </a>
-          </div>
+    <div class="app">
+
+        <div class="header">
+
+            <div class="menu-circle"></div>
+
+            <div class="header-menu">
+                <a class="menu-link is-active" href="#">Página Inicial </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar">
+            </div>
+
+            <button style="border: none;" loading="lazy" class="dark-light">
+
+                <svg loading="lazy" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                </svg>
+
+            </button>
+
         </div>
 
-        <div class="side-wrapper">
-          <div class="side-title">Categorias</div>
-          <div class="side-menu">
-            <a href="projetos.html">
-              <svg viewBox="0 0 512 512" fill="currentColor">
-                <circle cx="295.099" cy="327.254" r="110.96" transform="rotate(-45 295.062 327.332)" />
-                <path
-                  d="M471.854 338.281V163.146H296.72v41.169a123.1 123.1 0 01121.339 122.939c0 3.717-.176 7.393-.5 11.027zM172.14 327.254a123.16 123.16 0 01100.59-120.915L195.082 73.786 40.146 338.281H172.64c-.325-3.634-.5-7.31-.5-11.027z" />
-              </svg>
-              Projetos
-            </a>
-          </div>
-        </div>
+        <div class="wrapper">
 
-        <div class="side-wrapper">
-          <div class="side-title">Links Úteis</div>
-          <div class="side-menu">
-            <a href="Social-links.html">
-              <svg viewBox="0 0 512 512" fill="currentColor">
-                <path
-                  d="M352 0H64C28.704 0 0 28.704 0 64v320a16.02 16.02 0 009.216 14.496A16.232 16.232 0 0016 400c3.68 0 7.328-1.248 10.24-3.712L117.792 320H352c35.296 0 64-28.704 64-64V64c0-35.296-28.704-64-64-64z" />
-                <path
-                  d="M464 128h-16v128c0 52.928-43.072 96-96 96H129.376L128 353.152V400c0 26.464 21.536 48 48 48h234.368l75.616 60.512A16.158 16.158 0 00496 512c2.336 0 4.704-.544 6.944-1.6A15.968 15.968 0 00512 496V176c0-26.464-21.536-48-48-48z" />
-              </svg>
+            <div class="left-side">
 
-              Redes Sociais
-            </a>
+                <div class="side-wrapper">
+                    <div class="side-title">Principais</div>
+                    <div class="side-menu">
+                        <a href="index.html">
+                            <svg viewBox="0 0 512 512">
+                                <g xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path
+                                        d="M0 0h128v128H0zm0 0M192 0h128v128H192zm0 0M384 0h128v128H384zm0 0M0 192h128v128H0zm0 0"
+                                        data-original="#bfc9d1" />
+                                </g>
+                                <path xmlns="http://www.w3.org/2000/svg" d="M192 192h128v128H192zm0 0"
+                                    fill="currentColor" data-original="#82b1ff" />
+                                <path xmlns="http://www.w3.org/2000/svg"
+                                    d="M384 192h128v128H384zm0 0M0 384h128v128H0zm0 0M192 384h128v128H192zm0 0M384 384h128v128H384zm0 0"
+                                    fill="currentColor" data-original="#bfc9d1" />
+                            </svg>
+                            Página Inicial
+                        </a>
+                    </div>
+                </div>
 
-              
+                <div class="side-wrapper">
+                    <div class="side-title">Categorias</div>
+                    <div class="side-menu">
+                        <a href="projetos.html">
+                            <svg viewBox="0 0 512 512" fill="currentColor">
+                                <circle cx="295.099" cy="327.254" r="110.96" transform="rotate(-45 295.062 327.332)" />
+                                <path
+                                    d="M471.854 338.281V163.146H296.72v41.169a123.1 123.1 0 01121.339 122.939c0 3.717-.176 7.393-.5 11.027zM172.14 327.254a123.16 123.16 0 01100.59-120.915L195.082 73.786 40.146 338.281H172.64c-.325-3.634-.5-7.31-.5-11.027z" />
+                            </svg>
+                            Projetos
+                        </a>
+                    </div>
+                </div>
 
-            <!-- <a href="Area de Testes/paginaDeTestes.html">
+                <div class="side-wrapper">
+                    <div class="side-title">Links Úteis</div>
+                    <div class="side-menu">
+                        <a href="Social-links.html">
+                            <svg viewBox="0 0 512 512" fill="currentColor">
+                                <path
+                                    d="M352 0H64C28.704 0 0 28.704 0 64v320a16.02 16.02 0 009.216 14.496A16.232 16.232 0 0016 400c3.68 0 7.328-1.248 10.24-3.712L117.792 320H352c35.296 0 64-28.704 64-64V64c0-35.296-28.704-64-64-64z" />
+                                <path
+                                    d="M464 128h-16v128c0 52.928-43.072 96-96 96H129.376L128 353.152V400c0 26.464 21.536 48 48 48h234.368l75.616 60.512A16.158 16.158 0 00496 512c2.336 0 4.704-.544 6.944-1.6A15.968 15.968 0 00512 496V176c0-26.464-21.536-48-48-48z" />
+                            </svg>
+
+                            Redes Sociais
+                        </a>
+
+
+
+                        <!-- <a href="Area de Testes/paginaDeTestes.html">
               Página de Testes
             </a>
 
@@ -94,385 +101,234 @@
               Pg de Testes integrada
             </a> -->
 
-          </div>
-        </div>
-      </div>
-      <div class="main-container">
-        <div class="main-header">
-          <!-- <a class="menu-link-main" href="#">Página Inicial</a>-->
-          <div class="header-menu">
-            <a class="main-header-link is-active" scroll-behavior="smooth" href="#intro" aria-current="true">Introdução</a>
-            <a class="main-header-link" href="#aboutme" aria-current="false">Sobre Mim</a>
-            <a class="main-header-link" href="#habilities" aria-current="false">Habilidades</a>
-          </div>
-        </div>
-
-        <div class="main-contentP">
-          <section class="title-section hidden" id="intro">
-            <div class="section-contents">
-              <h1>Olá!</h1>
-              <p>Me chamo Daniel Mello, Sou programador e desenvolvedor FullStack</p>
-            </div>
-          </section>
-
-          <section class="hidden">
-            <div class="section-contents">
-              <p>Desenvolvi este site para apresentar meus projetos e qualificações </p>
-            </div>
-          </section>
-
-          <section class="hidden">
-            <div class="section-contents">
-              <p>O próprio site em si já é um dos projetos, mas vale lembrar que ele ainda está em estapa de desenvolvimento</p>
-            </div>
-          </section>
-
-          <section class="hidden">
-            <div class="section-contents">
-              <p>Neste  site é possível me contactar ou ter acesso direto aos projetos que desenvolvi na aba "Redes
-                Sociais"</p>
-            </div>
-          </section>
-
-          <section class="title-section hidden" id="aboutme">
-            <div class="section-contents">
-              <h1>Sobre Mim</h1>
-              <p>Eu sou estudante de Engenharia da Computação na UERJ e grande entusiasta de programação e
-                desenvolvimento web</p>
-            </div>
-          </section>
-
-          <section class="title-section hidden" id="aboutme">
-            <div class="section-contents">
-              <h1>Competências Academicas</h1>
-              <p>Atualmente estou cursando Engenharia da computação na UERJ, </p>
-            </div>
-          </section>
-
-          <section class="hab-title-section hidden" id="habilities">
-            <div class="section-contents">
-              <h1>Minhas Habilidades</h1>
-              <p></p>
-              <div class="hab-logos" is="habConteiner">
-                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn1">
-                  <img id="html5logo" src="https://icongr.am/devicon/html5-original.svg?size=100&color=ffffff">
+                    </div>
                 </div>
 
-                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn2">
-                  <img id="css3logo" src="https://icongr.am/devicon/css3-original.svg?size=100&color=ffffff">
+            </div>
+
+            <div class="main-container">
+
+                <div class="main-header">
+                    <!-- <a class="menu-link-main" href="#">Página Inicial</a>-->
+                    <div class="header-menu" id="header-menu">
+                        <a class="main-header-link is-active" scroll-behavior="smooth" href="#intro" aria-current="true">Introdução</a>
+                        <a class="main-header-link" href="#aboutme" aria-current="false">Sobre Mim</a>
+                        <a class="main-header-link" href="#habilities" aria-current="false">Habilidades</a>
+                    </div>
+
                 </div>
 
-                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn3">
-                  <img id="jslogo" src="https://icongr.am/devicon/javascript-original.svg?size=100&color=ffffff">
-                </div>
+                <div class="main-contentP">
 
-                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn4">
-                  <img id="cpplogo" src="https://icongr.am/devicon/cplusplus-original.svg?size=100&color=002aff">
-                </div>
+                    <section class="title-section hidden" id="intro">
+                        <div class="section-contents">
+                            <h1>Olá!</h1>
+                            <p>Me chamo Daniel Mello, Sou programador e desenvolvedor FullStack</p>
+                        </div>
+                    </section>
 
-                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)" id="hoverOn5">
+                    <section class="hidden">
+                        <div class="section-contents">
+                            <p>Desenvolvi este site para apresentar meus projetos e qualificações </p>
+                        </div>
+                    </section>
 
-                  <svg style="width: 100px" style="height: 100px;" id="pythonlogo" viewBox="0 0 128 128">
-                    <linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" 
-                    y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)">
-                      <stop offset="0" stop-color="#5A9FD4"></stop>
-                      <stop offset="1" stop-color="#306998"></stop>
-                    </linearGradient>
+                    <section class="hidden">
+                        <div class="section-contents">
+                            <p>O próprio site em si já é um dos projetos, mas vale lembrar que ele ainda está em estapa
+                                de desenvolvimento</p>
+                        </div>
+                    </section>
 
-                    <linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" 
-                    y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)">
-                      <stop offset="0" stop-color="#FFD43B"></stop>
-                      <stop offset="1" stop-color="#FFE873"></stop>
-                    </linearGradient>
+                    <section class="hidden">
+                        <div class="section-contents">
+                            <p>Neste site é possível me contactar ou ter acesso direto aos projetos que desenvolvi na
+                                aba "Redes
+                                Sociais"</p>
+                        </div>
+                    </section>
 
-                    <path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 
+                    <section class="title-section hidden" id="aboutme">
+                        <div class="section-contents">
+                            <h1>Sobre Mim</h1>
+                            <p>Eu sou estudante de Engenharia da Computação na UERJ e grande entusiasta de programação e
+                                desenvolvimento web</p>
+                        </div>
+                    </section>
+
+                    <section class="title-section hidden" id="aboutme">
+                        <div class="section-contents">
+                            <h1>Competências Academicas</h1>
+                            <p>Atualmente estou cursando Engenharia da computação na UERJ, </p>
+                        </div>
+                    </section>
+
+                    <section class="hab-title-section hidden" id="habilities">
+                        <div class="section-contents">
+                            <h1>Minhas Habilidades</h1>
+                            <p></p>
+                            <div class="hab-logos" is="habConteiner">
+                                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)"
+                                    id="hoverOn1">
+                                    <img id="html5logo"
+                                        src="https://icongr.am/devicon/html5-original.svg?size=100&color=ffffff">
+                                </div>
+
+                                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)"
+                                    id="hoverOn2">
+                                    <img id="css3logo"
+                                        src="https://icongr.am/devicon/css3-original.svg?size=100&color=ffffff">
+                                </div>
+
+                                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)"
+                                    id="hoverOn3">
+                                    <img id="jslogo"
+                                        src="https://icongr.am/devicon/javascript-original.svg?size=100&color=ffffff">
+                                </div>
+
+                                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)"
+                                    id="hoverOn4">
+                                    <img id="cpplogo"
+                                        src="https://icongr.am/devicon/cplusplus-original.svg?size=100&color=002aff">
+                                </div>
+
+                                <div class="logo hidden" onmouseenter="showText (this)" onmouseleave="resetText (this)"
+                                    id="hoverOn5">
+
+                                    <svg style="width: 100px" style="height: 100px;" id="pythonlogo"
+                                        viewBox="0 0 128 128">
+                                        <linearGradient id="python-original-a" gradientUnits="userSpaceOnUse"
+                                            x1="70.252" y1="1237.476" x2="170.659" y2="1151.089"
+                                            gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)">
+                                            <stop offset="0" stop-color="#5A9FD4"></stop>
+                                            <stop offset="1" stop-color="#306998"></stop>
+                                        </linearGradient>
+
+                                        <linearGradient id="python-original-b" gradientUnits="userSpaceOnUse"
+                                            x1="209.474" y1="1098.811" x2="173.62" y2="1149.537"
+                                            gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)">
+                                            <stop offset="0" stop-color="#FFD43B"></stop>
+                                            <stop offset="1" stop-color="#FFE873"></stop>
+                                        </linearGradient>
+
+                                        <path fill="url(#python-original-a)"
+                                            d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 
                       12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 
                       5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 
                       12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 
-                      4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)">
-                    </path>
+                      4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"
+                                            transform="translate(0 10.26)">
+                                        </path>
 
-                    <path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 
+                                        <path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 
                       12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 
                       12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 
                       0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 
-                      4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)">
-                    </path>
+                      4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"
+                                            transform="translate(0 10.26)">
+                                        </path>
 
-                    <radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" 
-                      gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop><stop offset="1" stop-color="#7F7F7F" stop-opacity="0">
+                                        <radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743"
+                                            gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop>
+                                            <stop offset="1" stop-color="#7F7F7F" stop-opacity="0">
 
-                      </stop>
-                    </radialGradient>
+                                            </stop>
+                                        </radialGradient>
 
-                    <path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 
+                                        <path opacity=".444" fill="url(#python-original-c)"
+                                            d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 
                       0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z">
-                    </path>
+                                        </path>
 
-                  </svg>
+                                    </svg>
 
-                  <!-- <img id="pythonlogo" src="https://icongr.am/devicon/python-original.svg?size=100&color=currentColor"> -->
+                                    <!-- <img id="pythonlogo" src="https://icongr.am/devicon/python-original.svg?size=100&color=currentColor"> -->
+                                </div>
+
+                            </div>
+
+                            <section class="subsection hidden" id="description0">
+                                <div class="section-contents">
+                                    <p>
+                                        <-- Passe o mouse por cima de uma das logos para obter mais detalhes -->
+                                    </p>
+                                </div>
+                            </section>
+
+                            <section class="subsection hidden" id="description1">
+                                <div class="section-contents">
+                                    <h1>HTML5</h1>
+                                    <p>Possuo conhecimento básico de HTML5 há mais de 1 ano, no entanto somente há 2
+                                        meses estou
+                                        me aprofundando nos estudos para o desenvolvimento de projetos acadêmicos e para
+                                        este site</p>
+                                </div>
+                            </section>
+
+                            <section class="subsection hidden" id="description2">
+                                <div class="section-contents">
+                                    <h1>CSS3</h1>
+                                    <p>Uma tecnologia que acompanha o HTML tanto em sua definição quanto no meu
+                                        apreendizado, me
+                                        aprofundei nos estudos
+                                        dessa tecnologia há 2 meses, para desenvolimento de projetos acadêmicos e
+                                        pessoais, como este site
+                                    </p>
+                                </div>
+                            </section>
+
+                            <section class="subsection hidden" id="description3">
+                                <div class="section-contents">
+                                    <h1>JavaScript</h1>
+                                    <p>JavaScript como linguagem eu possuo um conhecimento intermediário, pois conceitos
+                                        básicos de lógica de programação
+                                        já me acompanham de outras linguagens, tornando necessário apenas o estudo de
+                                        sintaxe e semântica do JS; Em função da manupulação do DOM
+                                        eu estudo há 2 meses, com meu conhecimento se limitando atualmente ao que foi
+                                        integrado a esse site com o FrameWork Jquery</p>
+                                </div>
+                            </section>
+
+                            <section class="subsection hidden" id="description4">
+                                <div class="section-contents">
+                                    <h1>C++</h1>
+                                    <p>Comecei a estudar programação orientada a objetos há 6 meses, a primeria
+                                        linguagem que tive
+                                        contato com POO foi o C++, nesse mesmo período estudei sobre algoritmos e
+                                        estruturas de dados usando
+                                        essa linguagem </p>
+                                </div>
+                            </section>
+
+                            <section class="subsection hidden" id="description5">
+                                <div class="section-contents">
+                                    <h1>Python</h1>
+                                    <p>Comecei a estudar Python há 2 meses, tendo como foco noções básicas da linguagem
+                                        e utilização do FrameWork Django, mais específicamente
+                                        em Front-End e na integração dele com o banco de dados
+                                    </p>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </section>
+
                 </div>
-
-              </div>
-
-              <section class="subsection hidden" id="description0">
-                <div class="section-contents">
-                  <p>
-                    <-- Passe o mouse por cima de uma das logos para obter mais detalhes -->
-                  </p>
-                </div>
-              </section>
-
-              <section class="subsection hidden" id="description1">
-                <div class="section-contents">
-                  <h1>HTML5</h1>
-                  <p>Possuo conhecimento básico de HTML5 há mais de 1 ano, no entanto somente há 2 meses estou
-                    me aprofundando nos estudos para o desenvolvimento de projetos acadêmicos e para este site</p>
-                </div>
-              </section>
-
-              <section class="subsection hidden" id="description2">
-                <div class="section-contents">
-                  <h1>CSS3</h1>
-                  <p>Uma tecnologia que acompanha o HTML tanto em sua definição quanto no meu apreendizado, me
-                    aprofundei nos estudos
-                    dessa tecnologia há 2 meses, para desenvolimento de projetos acadêmicos e pessoais, como este site
-                  </p>
-                </div>
-              </section>
-
-              <section class="subsection hidden" id="description3">
-                <div class="section-contents">
-                  <h1>JavaScript</h1>
-                  <p>JavaScript como linguagem eu possuo um conhecimento intermediário, pois conceitos básicos de lógica de programação
-                     já me acompanham de outras linguagens, tornando necessário apenas o estudo de sintaxe e semântica do JS; Em função da manupulação do DOM 
-                    eu estudo há 2 meses, com meu conhecimento se limitando atualmente ao que foi integrado a esse site com o FrameWork Jquery</p>
-                </div>
-              </section>
-
-              <section class="subsection hidden" id="description4">
-                <div class="section-contents">
-                  <h1>C++</h1>
-                  <p>Comecei a estudar programação orientada a objetos há 6 meses, a primeria linguagem que tive
-                    contato com POO foi o C++, nesse mesmo período estudei sobre algoritmos e estruturas de dados usando
-                    essa linguagem </p>
-                </div>
-              </section>
-
-              <section class="subsection hidden" id="description5">
-                <div class="section-contents">
-                  <h1>Python</h1>
-                  <p>Comecei a estudar Python há 2 meses, tendo como foco noções básicas da linguagem e utilização do FrameWork Django, mais específicamente
-                    em Front-End e na integração dele com o banco de dados
-                  </p>
-                </div>
-              </section>
-
 
             </div>
-          </section>
 
         </div>
-      </div>
 
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-      <script src="./script.js"></script>
+    </div>
 
-
-      <script>
-        
-
-
-$(function () {
-  $(".menu-link").click(function () {
-    $(".menu-link").removeClass("is-active");
-    $(this).addClass("is-active");
-  });
-});
-
-$(function () {
-  $(".main-header-link").click(function () {
-    $(".main-header-link").removeClass("is-active");
-    $(this).addClass("is-active");
-  });
-});
-
-$(".search-bar input")
-  .focus(function () {
-    $(".header").addClass("wide");
-  })
-  .blur(function () {
-    $(".header").removeClass("wide");
-  });
-
-
-
-// =============== //
-// Light-Dark Mode //
-
-// =============== //
-
-// const toggleButton = document.querySelector('.dark-light');
-
-if (localStorage.getItem ('lightMode') == 1){
-
-    document.body.classList.add('light-mode');
-
-    // document.body.classList.toggle('light-mode');
-    // alert ('light')
-}
-
-else if (localStorage.getItem ('lightMode') == 0){
-
-    document.body.classList.remove('light-mode');
-
-    // document.body.classList.toggle('light-mode');
-    // alert ('dark')
-}
-
-function toggleButtonFunc (){
-
-    if (localStorage.getItem ('lightMode') == 1){
-        localStorage.setItem("lightMode", 0);
-
-        document.body.classList.remove('light-mode');
-
-        console.log ('dark')
-
-        // document.body.classList.toggle('light-mode');
-    }
-
-    else if (localStorage.getItem ('lightMode') == 0){
-
-        localStorage.setItem("lightMode", 1);
-        
-        document.body.classList.add('light-mode');
-        
-        console.log ('light')
-
-        // document.body.classList.toggle('light-mode');
-    }    
-}
-
-
-
-
-// toggleButton.addEventListener('click', () => {
-    
-//     if (localStorage.getItem ('lightMode') == 1){
-
-//         localStorage.setItem("lightMode", 0);
-        
-//         document.body.classList.toggle('light-mode');
-//         alert ('dark')
-        
-//     }
-    
-//     else if (localStorage.getItem ('lightMode') == 0){
-        
-//         localStorage.setItem("lightMode", 1);
-
-//         document.body.classList.toggle('light-mode');
-//         alert ('light')
-//     }
-// });
-
-
-// ================= //
-// Section Animation //
-// ================= //
-
-function ativaNoScroll() {
-
-  document.querySelectorAll('img').forEach((img, index) => {
-    if(img.getBoundingClientRect().top < window.innerHeight) {
-      img.src = img.getAttribute('data-src');
-    };
-  })
-
-}
-
-window.addEventListener('scroll', ativaNoScroll);
-
-// ============ //
-// Show section //
-// ============ //
-
-const observer = new IntersectionObserver ((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting){
-      // entry.target.classList.add('principal-show-section');
-      entry.target.classList.add('show');
-    }
-    else{
-      // entry.target.classList.remove('principal-show-section');
-      entry.target.classList.remove('show');
-    }
-
-  });
-});
-
-
-// const hiddenSection = document.querySelectorAll('.principal-section-hidden');
-const hiddenSection = document.querySelectorAll('.hidden');
-hiddenSection.forEach((el) => observer.observe(el));
-
-
-// ============== //
-// Scroll To View //
-// ============== //
-
-
-$(document).ready(function(){
-  $("a").on('click', function(event) {
-
-    if (this.hash !== "") {
-      event.preventDefault();
-
-      var hash = this.hash;
-
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 0, function(){
-
-        window.location.hash = hash;
-      });
-    } 
-  });
-});
-
-
-
-// ================== //
-// Hover to View Text //
-// ================== //
-
-
-
-let description0 = document.getElementById ('description0');
-
-
-function showText (elementHover) {
-    let id = parseInt(elementHover.id.slice(7), 10);
-    let elementToDisplay = document.getElementById ('description' + id);
-
-    elementToDisplay.setAttribute('style', 'display: block');
-    description0.setAttribute ('style', 'display: none');
-}
-
-
-function resetText (elementHoverOff){
-    let id = parseInt(elementHoverOff.id.slice(7), 10);
-    let elementToDisplayOff = document.getElementById ('description' + id);
-
-    elementToDisplayOff.setAttribute('style', 'display: none');
-    description0.setAttribute ('style', 'display: block');
-}
-      </script>
+    <canvas class="background"></canvas>
+    <script src="./particles.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="./script.js"></script>
 
 </body>
 
 </html>
-

@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+#backgroundImg img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 .light-mode .pop-up__title {
   border-color: var(--theme-color);
 }
@@ -56,31 +72,22 @@ html {
 
 body {
   font-family: var(--body-font);
-  background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
   background-size: cover;
   background-position: center;
+  
+ 
+  background: rgb(28,180,223);
+  background: -moz-linear-gradient(45deg, rgba(28,180,223,1) 0%, rgba(55,81,152,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(28,180,223,1) 0%, rgba(55,81,152,1) 100%);
+  background: linear-gradient(45deg, rgba(28,180,223,1) 0%, rgba(55,81,152,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1cb4df",endColorstr="#375198",GradientType=1);
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2em;
   width: 100%;
   height: 100vh;
-}
-
-.video-bg {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-bg video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 img {
@@ -161,6 +168,7 @@ body.light-mode .video-bg:before {
   -webkit-backdrop-filter: blur(20px);
   font-size: 15px;
   font-weight: 500;
+  z-index: 2;
 }
 
 .header {
