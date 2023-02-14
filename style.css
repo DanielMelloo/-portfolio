@@ -43,6 +43,22 @@
   --scrollbar-bg: rgb(1 2 3 / 40%);
 
   --section-bg-dark: rgba(0, 0, 0, 0.5);
+
+  /* Secondary Variables */
+
+  --defaltBoxSizeW: 40vw;
+  --defaltBoxSizeV: 45vh;
+
+  --sectionBorderRadius: 20px;
+
+  --textCardMargin: 20px;
+
+  --widthSection:1px;
+  --heightSection: 40vh;
+
+  --fontSize: 20px;
+
+  --backgroundFade: linear-gradient(rgba(0, 0, 0, 0.087), rgba(0,0,0,0.7));
 }
 
 .light-mode {
@@ -59,7 +75,9 @@
   --hover-menu-bg: rgba(255 255 255 / 35%);
   --scrollbar-bg: rgb(255 253 253 / 57%);
   --content-title-color: var(--theme-color);
-  --section-bg:rgba(250, 250, 250, 0.4)
+  --section-bg:rgba(250, 250, 250, 0.4);
+
+  --backgroundFade: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 
   /* --content-title-color: --theme-color;  */
 }
@@ -416,26 +434,51 @@ body.light-mode .video-bg:before {
 
 .main-content{
   padding: 2vw;
-  display: flex;
+  overflow: scroll;
+
   flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
-  overflow: hidden;
+  justify-content: center;
+
+  /* 
+  
   margin-top: 20px;
 
-  flex-basis: 240px;
   border-right: 1px solid var(--border-color);
-  overflow: auto;
+  
   flex-shrink: 0;
   scroll-behavior: smooth;
+  overflow: auto;
+  width: auto; 
+  
+  */
 
 }
+
+
+
+  .main-content::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 10px;
+  }
+
+  .main-content::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-bg);
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+  }
+
+  .main-content::-webkit-scrollbar-corner {
+    display: none;
+  }
+
+
+
+
 
 .main-contentP{
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  scroll-behavior: smooth;
   
   width: auto;
   padding: 2vw;
@@ -457,7 +500,7 @@ body.light-mode .video-bg:before {
 .soon{
   /* height: 10vh; */
   padding: 4vh;
-  width: 55vh;
+  width: 70vh;
 
   background-color: var(--theme-bg-color);
   color: var(--theme-color);
@@ -476,12 +519,15 @@ body.light-mode .video-bg:before {
   margin-bottom:50px;
   background-color: var(--theme-bg-color);
   width: 50%;
-  height: 40vh;
+  height: 15vh;
   border-radius: 20px;
 
   align-items: center;
   justify-content: center;
   display: flex;
+
+  margin: 10em auto 10em auto;
+  overflow: hidden;
   
 }
 
@@ -531,6 +577,141 @@ section{
   height: 30vh; */
   margin-bottom: 100vh;
 }
+
+
+
+
+.flip-card:first-child {
+  margin: 3em auto 3em auto;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: var(--defaltBoxSizeW);
+  height: var(--defaltBoxSizeV);
+  perspective: 1000px;
+  margin: 10em auto 10em auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: fit-content;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+} 
+
+.flip-card-front { 
+  background-color: var(--theme-bg-color); 
+  background-image: var(--backgroundFade), url('./assets/landing-page.jpg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+
+  height: 100%;
+  width: 100%;
+
+  border: none;
+  background-position: center;
+  background-size: cover;
+}
+
+.flip-card-front h1 {
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-100%);
+  font-size: 40px;
+  color: var(--theme-color);
+  /* margin: var(--textCardMargin); */
+}
+
+  .flip-card-front img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--sectionBorderRadius);
+
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+
+  
+  display: inline-block;
+  position: relative;
+
+  }
+
+  .flip-card-back {
+    display: flex;
+    flex-direction: column;;
+    /* background-image: linear-gradient(315deg, var(--color1), var(--color5)); */
+    background-color: var(--theme-bg-color);
+    color: var(--theme-color);
+    transform: rotateY(180deg);
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flip-card-back img {
+    width: 140px;
+    margin-top: 1rem;
+    object-fit:scale-down;
+    border-radius: var(--sectionBorderRadius);
+  }
+
+  .flip-card-back h3{
+    margin: var(--textCardMargin);
+    margin-bottom: 0.3rem;
+    font-size: var(--fontSize);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .hidden{
   opacity: 0;
