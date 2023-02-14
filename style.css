@@ -473,7 +473,9 @@ body.light-mode .video-bg:before {
   }
 
 
-
+p {
+  text-align: center;;
+}
 
 
 .main-contentP{
