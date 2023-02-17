@@ -4,10 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Daniel Mello</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js'></script>
+    <script src="./particles/particles.js" def></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -18,12 +23,12 @@
 
             <div class="menu-circle"></div>
 
-            <div class="header-menu">
+            <div class="header-menu" id="headerMenu">
                 <a class="menu-link is-active" href="#">Página Inicial </a>
             </div>
 
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar">
+            <div class="search-bar" id="search-bar">
+                <input id="search-bar-input" type="text" placeholder="Pesquisar">
             </div>
 
             <button style="border: none;" loading="lazy" class="dark-light">
@@ -119,27 +124,27 @@
 
                 <div class="main-contentP">
 
-                    <section class="title-section hidden" id="intro">
+                    <section class="title-section introSec hidden" id="intro">
                         <div class="section-contents">
                             <h1>Olá!</h1>
                             <p>Me chamo Daniel Mello, Sou programador e desenvolvedor FullStack</p>
                         </div>
                     </section>
 
-                    <section class="hidden">
+                    <section class="hidden introSec">
                         <div class="section-contents">
                             <p>Desenvolvi este site para apresentar meus projetos e qualificações </p>
                         </div>
                     </section>
 
-                    <section class="hidden">
+                    <section class="hidden introSec">
                         <div class="section-contents">
                             <p>O próprio site em si já é um dos projetos, mas vale lembrar que ele ainda está em estapa
                                 de desenvolvimento</p>
                         </div>
                     </section>
 
-                    <section class="hidden">
+                    <section class="hidden introSec">
                         <div class="section-contents">
                             <p>Neste site é possível me contactar ou ter acesso direto aos projetos que desenvolvi na
                                 aba "Redes
@@ -147,7 +152,7 @@
                         </div>
                     </section>
 
-                    <section class="title-section hidden" id="aboutme">
+                    <section class="title-section aboutmeSec hidden" id="aboutme">
                         <div class="section-contents">
                             <h1>Sobre Mim</h1>
                             <p>Eu sou estudante de Engenharia da Computação na UERJ e grande entusiasta de programação e
@@ -155,14 +160,14 @@
                         </div>
                     </section>
 
-                    <section class="title-section hidden" id="aboutme">
+                    <section class="title-section aboutmeSec hidden" id="aboutme">
                         <div class="section-contents">
                             <h1>Competências Academicas</h1>
                             <p>Atualmente estou cursando Engenharia da computação na UERJ, </p>
                         </div>
                     </section>
 
-                    <section class="hab-title-section hidden" id="habilities">
+                    <section class="hab-title-section habilitiesSec hidden" id="habilities">
                         <div class="section-contents">
                             <h1>Minhas Habilidades</h1>
                             <p></p>
@@ -324,9 +329,6 @@
     </div>
 
     <canvas class="background"></canvas>
-    <script src="./particles/particles.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="./script.js"></script>
 
 </body>
 
