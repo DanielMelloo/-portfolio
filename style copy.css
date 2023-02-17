@@ -905,9 +905,9 @@ section{
 }
 
 @media screen and (max-width: 610px) {
-  .header-menu a:not(.main-header-link) {
+  /* .header-menu a:not(.main-header-link) {
 
-  }
+  } */
   
 }
 
