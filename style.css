@@ -182,8 +182,8 @@ body.light-mode .video-bg:before {
     position: relative;
     width: 100%;
     border-radius: 14px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     font-size: 15px;
     font-weight: 500;
     z-index: 2;
@@ -790,18 +790,9 @@ section {
         width: 100%;
         justify-content: center;
         /* align-items: center; */
-        align-content: flex-end;
+        /* align-content: flex-end; */
         display: inline;
         flex-direction: row;
-    }
-
-    body {
-        max-height: 90vh;
-    }
-
-    .app {
-        max-height: 90vh;
-        border-radius: 80px;
     }
 
     .header-menu{
@@ -817,18 +808,27 @@ section {
 
     body {
         margin: 0;
-        width: 100vw;
-        height: 100vh;
 
     }
 
     .app {
+        position: absolute;
+        
 
-        font-size: var(--fontSize);
-        width: 100%;
-        height: 100%;
 
         border-radius: 0;
+        font-size: var(--fontSize);
+        width: 100vw;
+        height: 100vh;
+
+        
+        margin: 0;
+    }
+
+    .background{
+        width: 100%;
+        height: 100%;
+        
     }
 
     .menu-header,
@@ -925,7 +925,24 @@ section {
         font-size: var(--fontSize);
         content: '<-- Toque nas logos para obter mais detalhes -->';
     }
-  
+
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+
+    .hab-logos {
+        margin-bottom: 2em;
+    }
+
+    .main-contentP section{ 
+        margin-bottom: 40vh;
+    }
+
+    #habilities div section{
+        
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 610px) {
