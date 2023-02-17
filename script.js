@@ -4,31 +4,35 @@ window.onload = function () {
     });
 };
 
+// ========= //
+// Variables //
+// ========= //
+
 
 let headerMenu = document.getElementById('header-menu');
 
+let searchBarInput = document.getElementById('search-bar-input');
+let header = document.querySelector('.header');
 
-$(function () {
-    $(".menu-link").click(function () {
-        $(".menu-link").removeClass("is-active");
-        $(this).addClass("is-active");
-    });
+const toggleButton = document.querySelector('.dark-light');
+
+const hiddenSection = document.querySelectorAll('.hidden');
+
+let description0 = document.getElementById('description0');
+
+
+// ================ //
+// Search Bar Slide //
+// ================ //
+
+
+searchBarInput.addEventListener('focus', function() {
+    header.classList.add('wide');
 });
 
-$(function () {
-    $(".main-header-link").click(function () {
-        $(".main-header-link").removeClass("is-active");
-        $(this).addClass("is-active");
-    });
+searchBarInput.addEventListener('blur', function() {
+    header.classList.remove('wide');
 });
-
-$(".search-bar input")
-    .focus(function () {
-        $(".header").addClass("wide");
-    })
-    .blur(function () {
-        $(".header").removeClass("wide");
-    });
 
 
 
@@ -36,7 +40,7 @@ $(".search-bar input")
 // Light-Dark Mode //
 // =============== //
 
-const toggleButton = document.querySelector('.dark-light');
+
 
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
@@ -44,96 +48,68 @@ toggleButton.addEventListener('click', () => {
 
 
 
-
-// toggleButton.addEventListener('click', () => {
-
-//     if (localStorage.getItem ('lightMode') == 1){
-
-//         localStorage.setItem("lightMode", 0);
-
-//         document.body.classList.toggle('light-mode');
-//         alert ('dark')
-
-//     }
-
-//     else if (localStorage.getItem ('lightMode') == 0){
-
-//         localStorage.setItem("lightMode", 1);
-
-//         document.body.classList.toggle('light-mode');
-//         alert ('light')
-//     }
-// });
-
-
 // ============ //
 // Show section //
 // ============ //
+
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
 
         if (entry.isIntersecting) {
-            // entry.target.classList.add('principal-show-section');
+            
             entry.target.classList.add('show');
 
-            switch (entry.target.id) {
+            if (entry.target.classList.contains('introSec')){
 
-                case 'intro':
-
-                    for (let child of headerMenu.children) {
+                for (let child of headerMenu.children) {
                         
-                        if ( child.getAttribute('href').substring(1) == 'intro') {
+                    if ( child.getAttribute('href').substring(1) == 'intro') {
 
-                            child.classList.add('is-active'); 
-                        }
-                        
-                        else{
-                            child.classList.remove('is-active'); 
-                        }
+                        child.classList.add('is-active'); 
                     }
-
-                    break;
-
-                case 'aboutme':
-
-                    for (let child of headerMenu.children) {
-                        
-                        if ( child.getAttribute('href').substring(1) == 'aboutme') {
-
-                            child.classList.add('is-active'); 
-                        }
-
-                        else{
-                            child.classList.remove('is-active'); 
-                        }
+                    
+                    else{
+                        child.classList.remove('is-active'); 
                     }
+                }
 
-                    break;
-
-                case 'habilities':
-
-                    for (let child of headerMenu.children) {
-                        
-                        if ( child.getAttribute('href').substring(1) == 'habilities') {
-
-                            child.classList.add('is-active'); 
-                        }
-
-                        else{
-                            child.classList.remove('is-active'); 
-                        }
-                    }
-
-                    break;
-
-                default:
-                    break;
             }
+            
+            else if (entry.target.classList.contains('aboutmeSec')) {
 
+                for (let child of headerMenu.children) {
+                        
+                    if ( child.getAttribute('href').substring(1) == 'aboutme') {
 
-        } else {
-            // entry.target.classList.remove('principal-show-section');
+                        child.classList.add('is-active'); 
+                    }
+
+                    else{
+                        child.classList.remove('is-active'); 
+                    }
+                }
+
+            }
+            
+            else if (entry.target.classList.contains('habilitiesSec')) {
+
+                for (let child of headerMenu.children) {
+                        
+                    if ( child.getAttribute('href').substring(1) == 'habilities') {
+
+                        child.classList.add('is-active'); 
+                    }
+
+                    else{
+                        child.classList.remove('is-active'); 
+                    }
+                }
+            }
+        } 
+
+        else {
             entry.target.classList.remove('show');
         }
 
@@ -141,8 +117,6 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 
-// const hiddenSection = document.querySelectorAll('.principal-section-hidden');
-const hiddenSection = document.querySelectorAll('.hidden');
 hiddenSection.forEach((el) => observer.observe(el));
 
 
@@ -151,9 +125,6 @@ hiddenSection.forEach((el) => observer.observe(el));
 // Hover to View Text //
 // ================== //
 
-
-
-let description0 = document.getElementById('description0');
 
 
 function showText(elementHover) {
