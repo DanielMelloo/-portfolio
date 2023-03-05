@@ -56,7 +56,7 @@
     --widthSection: 1px;
     --heightSection: 40vh;
 
-    --fontSize: 20px;
+    --fontSize: 15px;
 
     --backgroundFade: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
 }
@@ -192,7 +192,7 @@ body.light-mode .video-bg:before {
     border-radius: 14px;
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
-    font-size: 15px;
+    font-size: var(--fontSize);
     font-weight: 500;
     z-index: 2;
 }
@@ -261,7 +261,7 @@ body.light-mode .video-bg:before {
     background-color: var(--search-bg);
     border-radius: 4px;
     font-family: var(--body-font);
-    font-size: 15px;
+    font-size: var(--fontSize);
     font-weight: 500;
     padding: 0 20px 0 40px;
     box-shadow: 0 0 0 2px rgba(134, 140, 160, 0.02);
@@ -275,21 +275,21 @@ body.light-mode .video-bg:before {
 .search-bar input::-moz-placeholder {
     font-family: var(--body-font);
     color: var(--inactive-color);
-    font-size: 15px;
+    font-size: var(--fontSize);
     font-weight: 500;
 }
 
 .search-bar input:-ms-input-placeholder {
     font-family: var(--body-font);
     color: var(--inactive-color);
-    font-size: 15px;
+    font-size: var(--fontSize);
     font-weight: 500;
 }
 
 .search-bar input::placeholder {
     font-family: var(--body-font);
     color: var(--inactive-color);
-    font-size: 15px;
+    font-size: var(--fontSize);
     font-weight: 500;
 }
 
@@ -400,6 +400,8 @@ body.light-mode .video-bg:before {
     white-space: nowrap;
     display: flex;
     text-decoration: none;
+    justify-self: center;
+    align-items: center;
 
 }
 
@@ -699,10 +701,15 @@ section {
 
 
 
+.logoImg {
+    width:100px;
+    height: 100px;
+}
 
+.flip-card-front h1{
+    width: 100%;
 
-
-
+}
 
 
 
@@ -895,7 +902,7 @@ section {
         background-color: var(--search-bg);
         border-radius: 4px;
         font-family: var(--body-font);
-        font-size: 15px;
+        font-size: var(--fontSize);
         font-weight: 500;
         padding: 0 20px 0 40px;
         box-shadow: 0 0 0 2px rgba(134, 140, 160, 0.02);
@@ -969,6 +976,35 @@ section {
 @media screen and (max-width: 1370px) {
     .menu-link-main {
         display: none;
+    }
+
+    /* .app {
+        font-size: 12px;
+    } */
+
+    :root {
+        --fontSize: 12px;
+    }
+
+    .logoImg {
+        width: 75px;
+        height: 75px;
+    }
+
+    .side-menu {
+        font-size: 10px;
+    }
+
+    .icons {
+        width: 18px;
+        height: 18px;
+    }
+
+    .title-section {
+        margin-top: 0;
+        margin-bottom: 30vh;
+        padding-top: 15vh;
+        padding-bottom: 23vh;
     }
 
 
