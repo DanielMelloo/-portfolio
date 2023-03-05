@@ -61,6 +61,13 @@
     --backgroundFade: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
 }
 
+@media screen and (max-width: 1370px) {
+    :root {
+        --fontSize: 5px;
+    }
+}
+
+
 .light-mode {
     --theme-bg-color: rgb(255 255 255 / 31%);
     --theme-color: #3c3a3a;
@@ -959,10 +966,12 @@ section {
 
 }
 
-@media screen and (max-width: 1055px) {
+@media screen and (max-width: 1370px) {
     .menu-link-main {
         display: none;
     }
+
+
 
     /* .main-header .header-menu {
         margin: auto;
