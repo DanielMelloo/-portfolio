@@ -22,8 +22,8 @@ Este site foi desenvolvido para apresentar os projetos e qualificações de Dani
 
 - `index.html`: arquivo HTML principal do site.
 - `style.css`: arquivo CSS para estilização do site.
-- `icons/`: diretório contendo ícones utilizados no site.
-- `particles/`: diretório contendo arquivos relacionados ao efeito de partículas no fundo do site.
+- `icons`: diretório contendo ícones utilizados no site.
+- `particles`: diretório contendo arquivos relacionados ao efeito de partículas no fundo do site.
 - `script.js`: arquivo JavaScript com funcionalidades adicionais do site.
 
 ## Contribuindo
@@ -33,8 +33,8 @@ Este projeto foi desenvolvido como um portfólio pessoal, portanto, não aceitam
 ## Autor
 
 - Nome: Daniel Mello
-- Website: [www.seusite.com](https://www.seusite.com)
-- GitHub: [github.com/seu-usuario](https://github.com/seu-usuario)
+- Website: [Portfólio](https://www.danielmello.tech)
+- GitHub: [github.com/DanielMelloo](https://github.com/DanielMelloo)
 
 ## Licença
 
