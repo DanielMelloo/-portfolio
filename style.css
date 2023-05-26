@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+a:visited {
+    text-decoration: none;
+}
+
 #backgroundImg img {
     position: absolute;
     display: block;
@@ -157,9 +161,8 @@ img {
     background-color: rgba(255, 255, 255, 0.94);
 }
 
-.light-mode .section-contents {
+.light-mode .section-contents, .light-mode .button-inv {
     background-color: var(--section-bg);
-
 }
 
 .light-mode .principal-section {
@@ -713,9 +716,35 @@ section {
 
 
 
+.button-inv{
+    margin: 2vh;
+    color: var(--theme-color);
+    background-color: var(--section-bg-dark);
+    border-radius: 10px;
 
+    padding: 10px 30px;
+    width: auto;
 
+    display: grid;
+    place-items: center;
 
+    width: auto;
+    border: none;
+    
+    border-radius: 40px;
+
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.button-inv:hover {
+
+    background: rgba(23, 23, 23, 0.786);
+    border-radius: 40px;
+    transition: background 0.5s ease;
+}
 
 
 

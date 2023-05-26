@@ -174,7 +174,7 @@ const observer = new IntersectionObserver((entries) => {
             
             entry.target.classList.add('show');
 
-            if (entry.target.classList.contains('introSec')){
+            if (entry.target.classList.contains('section-contents')){
 
                 for (let child of headerMenu.children) {
                         
@@ -188,37 +188,6 @@ const observer = new IntersectionObserver((entries) => {
                     }
                 }
 
-            }
-            
-            else if (entry.target.classList.contains('aboutmeSec')) {
-
-                for (let child of headerMenu.children) {
-                        
-                    if ( child.getAttribute('href').substring(1) == 'aboutme') {
-
-                        child.classList.add('is-active'); 
-                    }
-
-                    else{
-                        child.classList.remove('is-active'); 
-                    }
-                }
-
-            }
-            
-            else if (entry.target.classList.contains('habilitiesSec')) {
-
-                for (let child of headerMenu.children) {
-                        
-                    if ( child.getAttribute('href').substring(1) == 'habilities') {
-
-                        child.classList.add('is-active'); 
-                    }
-
-                    else{
-                        child.classList.remove('is-active'); 
-                    }
-                }
             }
         } 
 
