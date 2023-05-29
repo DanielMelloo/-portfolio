@@ -1018,6 +1018,7 @@ section {
 
 #projects-list{
     height: auto;
+    overflow-y: auto;
 }
 
 #projects-list *{
@@ -1028,6 +1029,8 @@ section {
     margin-bottom: 1em;
 
     color: var(--theme-color);
+
+    margin-right: 15px;
 }
 
 #projects-list li{

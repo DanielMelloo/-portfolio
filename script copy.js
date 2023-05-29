@@ -146,139 +146,33 @@ const resultsList = {
             (Redireciona direto para linkedin)',
         href: 'https://www.linkedin.com/in/daniel-melloo-/'
     },
+    item5: {
+        title: 'Linkedin',
+        description: 'Meu Linkedin\n \
+            (Redireciona direto para linkedin)',
+        href: 'https://www.linkedin.com/in/daniel-melloo-/'
+    },
+    item6: {
+        title: 'Linkedin',
+        description: 'Meu Linkedin\n \
+            (Redireciona direto para linkedin)',
+        href: 'https://www.linkedin.com/in/daniel-melloo-/'
+    },
+    item7: {
+        title: 'Linkedin',
+        description: 'Meu Linkedin\n \
+            (Redireciona direto para linkedin)',
+        href: 'https://www.linkedin.com/in/daniel-melloo-/'
+    },
+    item99: {
+        title: 'Projeto',
+        description: 'Descrição do projeto',
+        href: './projetos.html'
+    },
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const projectList = document.getElementById('projects-list');
-    const searchBarInput = document.getElementById('search-bar-input');
-    const noResultsMessage = document.getElementById('no-results-message');
-    let header = document.querySelector('.header');
 
-    if (searchBarInput && header) {
-        searchBarInput.addEventListener('focus', function() {
-            header.classList.add('wide');
-        });
 
-        searchBarInput.addEventListener('blur', function() {
-            header.classList.remove('wide');
-        });
-    }
-
-    searchBarInput.addEventListener('input', function(event) {
-        const searchValue = event.target.value.toLowerCase();
-
-        // Remove todos os elementos da lista de projetos
-        while (projectList.firstChild) {
-            projectList.removeChild(projectList.firstChild);
-        }
-
-        let hasVisibleItems = false;
-
-        if (searchValue === '.') {
-            // Exibe todos os elementos da lista de projetos
-            for (const key in resultsList) {
-                const item = resultsList[key];
-                const title = item.title;
-                const description = item.description;
-                const href = item.href;
-
-                const li = document.createElement('li');
-                const h2 = document.createElement('h2');
-                const a = document.createElement('a');
-
-                h2.classList.add('project-title');
-
-                h2.textContent = title;
-                a.textContent = 'Ver mais';
-                a.href = href;
-
-                li.appendChild(h2);
-
-                if (description.includes('\n')) {
-                    let count = description.split('\n').length;
-
-                    for (let i = 0; i < count; i++) {
-                        const p = document.createElement('p');
-                        p.textContent = description.split('\n')[i];
-                        p.classList.add('project-description');
-                        li.appendChild(p);
-                    }
-                } else {
-                    const p = document.createElement('p');
-                    p.textContent = description;
-                    p.classList.add('project-description');
-                    li.appendChild(p);
-                }
-
-                li.appendChild(a);
-
-                projectList.appendChild(li);
-                hasVisibleItems = true;
-            }
-        } else {
-            for (const key in resultsList) {
-                const item = resultsList[key];
-                const title = item.title;
-                const description = item.description;
-                const href = item.href;
-
-                if (title.toLowerCase().includes(searchValue) || description.toLowerCase().includes(searchValue)) {
-                    const li = document.createElement('li');
-                    const h2 = document.createElement('h2');
-                    const a = document.createElement('a');
-
-                    h2.classList.add('project-title');
-
-                    h2.textContent = title;
-                    a.textContent = 'Ver mais';
-                    a.href = href;
-
-                    li.appendChild(h2);
-
-                    if (description.includes('\n')) {
-                        let count = description.split('\n').length;
-
-                        for (let i = 0; i < count; i++) {
-                            const p = document.createElement('p');
-                            p.textContent = description.split('\n')[i];
-                            p.classList.add('project-description');
-                            li.appendChild(p);
-                        }
-                    } else {
-                        const p = document.createElement('p');
-                        p.textContent = description;
-                        p.classList.add('project-description');
-                        li.appendChild(p);
-                    }
-
-                    li.appendChild(a);
-
-                    projectList.appendChild(li);
-                    hasVisibleItems = true;
-                }
-            }
-        }
-
-        // Atualiza a exibição da lista de projetos e da mensagem de "nenhum resultado encontrado"
-        if (searchValue !== '') {
-            projectList.style.display = hasVisibleItems ? 'block' : 'none';
-            noResultsMessage.style.display = hasVisibleItems ? 'none' : 'block';
-        } else {
-            projectList.style.display = 'none';
-            noResultsMessage.style.display = 'none';
-        }
-    });
-
-    // Oculta todos os itens ao carregar a página inicialmente
-    projectList.style.display = 'none';
-    noResultsMessage.style.display = 'none';
-
-    // Verifica se a barra de pesquisa está vazia ao carregar a página
-    if (searchBarInput.value === '') {
-        projectList.style.display = 'none';
-        noResultsMessage.style.display = 'none';
-    }
-});
 
 
 
