@@ -106,7 +106,6 @@ window.onload = function () {
 // ========= //
 
 
-let header = document.querySelector('.header');
 
 let description0 = document.getElementById('description0');
 
@@ -117,14 +116,19 @@ let description0 = document.getElementById('description0');
 
 
 let searchBarInput = document.getElementById('search-bar-input');
+let header = document.querySelector('.header');
 
-searchBarInput.addEventListener('focus', function() {
-    header.classList.add('wide');
-});
 
-searchBarInput.addEventListener('blur', function() {
-    header.classList.remove('wide');
-});
+if (searchBarInput && header) {
+    searchBarInput.addEventListener('focus', function() {
+        header.classList.add('wide');
+    });
+
+    searchBarInput.addEventListener('blur', function() {
+        header.classList.remove('wide');
+    });
+}
+
 
 
 // =============== //
