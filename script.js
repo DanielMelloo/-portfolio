@@ -185,14 +185,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 const li = document.createElement('li');
                 const h2 = document.createElement('h2');
                 const a = document.createElement('a');
+                const div = document.createElement('div');
 
                 h2.classList.add('project-title');
 
                 h2.textContent = title;
-                a.textContent = 'Ver mais';
+                // a.textContent = 'Ver mais';
                 a.href = href;
+                li.appendChild(a);
+                a.appendChild(div)
 
-                li.appendChild(h2);
+                div.appendChild(h2);
 
                 if (description.includes('\n')) {
                     let count = description.split('\n').length;
@@ -201,16 +204,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         const p = document.createElement('p');
                         p.textContent = description.split('\n')[i];
                         p.classList.add('project-description');
-                        li.appendChild(p);
+                        div.appendChild(p);
                     }
                 } else {
                     const p = document.createElement('p');
                     p.textContent = description;
                     p.classList.add('project-description');
-                    li.appendChild(p);
+                    div.appendChild(p);
                 }
 
-                li.appendChild(a);
+                
 
                 projectList.appendChild(li);
                 hasVisibleItems = true;
@@ -226,14 +229,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     const li = document.createElement('li');
                     const h2 = document.createElement('h2');
                     const a = document.createElement('a');
+                    const div = document.createElement('div');
 
                     h2.classList.add('project-title');
 
                     h2.textContent = title;
-                    a.textContent = 'Ver mais';
+                    // a.textContent = 'Ver mais';
                     a.href = href;
 
-                    li.appendChild(h2);
+                    div.appendChild(h2);
 
                     if (description.includes('\n')) {
                         let count = description.split('\n').length;
@@ -242,15 +246,15 @@ document.addEventListener('DOMContentLoaded', function() {
                             const p = document.createElement('p');
                             p.textContent = description.split('\n')[i];
                             p.classList.add('project-description');
-                            li.appendChild(p);
+                            div.appendChild(p);
                         }
                     } else {
                         const p = document.createElement('p');
                         p.textContent = description;
                         p.classList.add('project-description');
-                        li.appendChild(p);
+                        div.appendChild(p);
                     }
-
+                    a.appendChild(div)
                     li.appendChild(a);
 
                     projectList.appendChild(li);
