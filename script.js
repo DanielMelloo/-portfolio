@@ -72,12 +72,9 @@ function converterTempoParaMeses(tempo) {
 }
 
 
-
 // ==================== //
 // Injeção de Variáveis //
 // ==================== //
-
-
 
 
 // Objeto que mapeia as variáveis aos elementos HTML correspondentes
@@ -88,28 +85,14 @@ const variaveisHtml = {
     js_basic_timeF: 'tempoDecorridoJsBasic', // Mapeamento da variável 'js_basic_timeF' ao ID do elemento HTML
     python_basic_timeF: 'tempoDecorridoPythonBasic', // Mapeamento da variável 'python_basic_timeF' ao ID do elemento HTML
     cpp_basic_timeF: 'tempoDecorridoCppBasic', // Mapeamento da variável 'cpp_basic_timeF' ao ID do elemento HTML
-  };
-  
-  // Itera sobre as entradas do objeto 'variaveisHtml'
+};
 
-
-
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     for (const [variavel, elementoId] of Object.entries(variaveisHtml)) {
         const elemento = document.getElementById(elementoId); // Obtém o elemento HTML com base no ID
         elemento.textContent = eval(variavel); // Atualiza o conteúdo do elemento com o valor da variável
-      }
-  });
-
-
-
-
-
-
-
-
-
-
+    }
+});
 
 window.onload = function () {
     Particles.init({
@@ -117,19 +100,13 @@ window.onload = function () {
     });
 };
 
+
 // ========= //
 // Variables //
 // ========= //
 
 
-let headerMenu = document.getElementById('header-menu');
-
-let searchBarInput = document.getElementById('search-bar-input');
 let header = document.querySelector('.header');
-
-const toggleButton = document.querySelector('.dark-light');
-
-const hiddenSection = document.querySelectorAll('.hidden');
 
 let description0 = document.getElementById('description0');
 
@@ -138,6 +115,8 @@ let description0 = document.getElementById('description0');
 // Search Bar Slide //
 // ================ //
 
+
+let searchBarInput = document.getElementById('search-bar-input');
 
 searchBarInput.addEventListener('focus', function() {
     header.classList.add('wide');
@@ -148,17 +127,39 @@ searchBarInput.addEventListener('blur', function() {
 });
 
 
-
 // =============== //
 // Light-Dark Mode //
 // =============== //
 
+// const toggleButton = document.querySelector('.dark-light');
 
+// toggleButton.addEventListener('click', () => {
+//     document.body.classList.toggle('light-mode');
+// });
 
-toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
+const toggleButton = document.querySelector('.dark-light');
+const body = document.body;
+const storageKey = 'theme';
+
+// Verificar o estado armazenado ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+  const theme = localStorage.getItem(storageKey);
+  if (theme === 'light') {
+    body.classList.add('light-mode');
+  }
 });
 
+// Alternar o tema ao clicar no botão
+toggleButton.addEventListener('click', () => {
+  body.classList.toggle('light-mode');
+
+  // Armazenar o estado do tema
+  if (body.classList.contains('light-mode')) {
+    localStorage.setItem(storageKey, 'light');
+  } else {
+    localStorage.removeItem(storageKey);
+  }
+});
 
 
 // ============ //
@@ -166,35 +167,39 @@ toggleButton.addEventListener('click', () => {
 // ============ //
 
 
+let headerMenu = document.getElementById('header-menu');
+
+const hiddenSection = document.querySelectorAll('.hidden');
+
+const sections = [
+  { name: 'intro', class: 'introSec' },
+  { name: 'aboutme', class: 'aboutmeSec' },
+  { name: 'habilities', class: 'habilitiesSec' }
+];
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-
         if (entry.isIntersecting) {
-            
             entry.target.classList.add('show');
-
-            if (entry.target.classList.contains('section-contents')){
-
+  
+            const sectionClass = sections.find(section => entry.target.classList.contains(section.class));
+  
+            if (sectionClass) {
+                const activeSectionName = sectionClass.name;
+    
                 for (let child of headerMenu.children) {
-                        
-                    if ( child.getAttribute('href').substring(1) == 'intro') {
-
-                        child.classList.add('is-active'); 
-                    }
-                    
-                    else{
-                        child.classList.remove('is-active'); 
+                    const href = child.getAttribute('href').substring(1);
+    
+                    if (href === activeSectionName) {
+                        child.classList.add('is-active');
+                    } else {
+                        child.classList.remove('is-active');
                     }
                 }
-
             }
-        } 
-
-        else {
+        } else {
             entry.target.classList.remove('show');
         }
-
     });
 });
 
@@ -202,11 +207,9 @@ const observer = new IntersectionObserver((entries) => {
 hiddenSection.forEach((el) => observer.observe(el));
 
 
-
 // ================== //
 // Hover to View Text //
 // ================== //
-
 
 
 function showText(elementHover) {
@@ -216,7 +219,6 @@ function showText(elementHover) {
     elementToDisplay.setAttribute('style', 'display: block');
     description0.setAttribute('style', 'display: none');
 }
-
 
 function resetText(elementHoverOff) {
     let id = parseInt(elementHoverOff.id.slice(7), 10);
