@@ -1,9 +1,8 @@
 
+
 // ============= //
 // Time function //
 // ============= //
-
-// Dia 13/11/2022
 
 
 const html_basic_time = '1 ano'
@@ -43,13 +42,13 @@ function calcularMesesDecorridos(data) {
   
     // Retorna uma string que descreve o tempo decorrido em anos e meses
     if (anos > 0 && mesesRestantes > 0) {
-      return `${anos} ${anosString} e ${mesesRestantes} ${mesesString}`
+        return `${anos} ${anosString} e ${mesesRestantes} ${mesesString}`
     } else if (anos > 0) {
-      return `${anos} ${anosString}`
+        return `${anos} ${anosString}`
     } else if (mesesRestantes > 0) {
-      return `${mesesRestantes} ${mesesString}`
+        return `${mesesRestantes} ${mesesString}`
     } else {
-      return 'Menos de um mês'
+        return 'Menos de um mês'
     }
 }
 
@@ -64,10 +63,11 @@ function calculaDiferençaMeses (dataInicial, dataSub){
 function converterTempoParaMeses(tempo) {
     const [quantidade, unidade] = tempo.split(' ');
     if (unidade === 'ano' || unidade === 'anos') {
-      return parseInt(quantidade) * 12;
+        return parseInt(quantidade) * 12;
     } else if (unidade === 'mês' || unidade === 'meses') {
-      return parseInt(quantidade);
+        return parseInt(quantidade);
     }
+
     return 0; // Caso a unidade não seja reconhecida, retorna 0
 }
 
@@ -77,38 +77,44 @@ function converterTempoParaMeses(tempo) {
 // ==================== //
 
 
-// Objeto que mapeia as variáveis aos elementos HTML correspondentes
 const variaveisHtml = {
-    html_basic_timeF: 'tempoDecorridoHtmlBasic', // Mapeamento da variável 'html_basic_timeF' ao ID do elemento HTML
-    html_intermed_timeF: 'tempoDecorridoHtmlIntermed', // Mapeamento da variável 'html_intermed_timeF' ao ID do elemento HTML
-    css_basic_timeF: 'tempoDecorridoCssBasic', // Mapeamento da variável 'css_basic_timeF' ao ID do elemento HTML
-    js_basic_timeF: 'tempoDecorridoJsBasic', // Mapeamento da variável 'js_basic_timeF' ao ID do elemento HTML
-    python_basic_timeF: 'tempoDecorridoPythonBasic', // Mapeamento da variável 'python_basic_timeF' ao ID do elemento HTML
-    cpp_basic_timeF: 'tempoDecorridoCppBasic', // Mapeamento da variável 'cpp_basic_timeF' ao ID do elemento HTML
+    html_basic_timeF: 'tempoDecorridoHtmlBasic',
+    html_intermed_timeF: 'tempoDecorridoHtmlIntermed',
+    css_basic_timeF: 'tempoDecorridoCssBasic',
+    js_basic_timeF: 'tempoDecorridoJsBasic',
+    python_basic_timeF: 'tempoDecorridoPythonBasic',
+    cpp_basic_timeF: 'tempoDecorridoCppBasic',
+};
+
+const valoresVariaveis = {
+    html_basic_timeF,
+    html_intermed_timeF,
+    css_basic_timeF,
+    js_basic_timeF,
+    python_basic_timeF,
+    cpp_basic_timeF,
 };
 
 document.addEventListener('DOMContentLoaded', function() {
     for (const [variavel, elementoId] of Object.entries(variaveisHtml)) {
-        const elemento = document.getElementById(elementoId); // Obtém o elemento HTML com base no ID
-        elemento.textContent = eval(variavel); // Atualiza o conteúdo do elemento com o valor da variável
+        const elemento = document.getElementById(elementoId);
+
+        if (elemento) {
+            elemento.textContent = valoresVariaveis[variavel]; // Atualiza o conteúdo do elemento com o valor da variável
+        }
     }
 });
+
+
+// ============ //
+// Particles.js //
+// ============ //
 
 window.onload = function () {
     Particles.init({
         selector: '.background'
     });
 };
-
-
-// ========= //
-// Variables //
-// ========= //
-
-
-
-let description0 = document.getElementById('description0');
-
 
 // ================ //
 // Search Bar Slide //
@@ -130,16 +136,10 @@ if (searchBarInput && header) {
 }
 
 
-
 // =============== //
 // Light-Dark Mode //
 // =============== //
 
-// const toggleButton = document.querySelector('.dark-light');
-
-// toggleButton.addEventListener('click', () => {
-//     document.body.classList.toggle('light-mode');
-// });
 
 const toggleButton = document.querySelector('.dark-light');
 const body = document.body;
@@ -147,22 +147,22 @@ const storageKey = 'theme';
 
 // Verificar o estado armazenado ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-  const theme = localStorage.getItem(storageKey);
-  if (theme === 'light') {
-    body.classList.add('light-mode');
-  }
+    const theme = localStorage.getItem(storageKey);
+    if (theme === 'light') {
+        body.classList.add('light-mode');
+    }
 });
 
 // Alternar o tema ao clicar no botão
 toggleButton.addEventListener('click', () => {
-  body.classList.toggle('light-mode');
+    body.classList.toggle('light-mode');
 
-  // Armazenar o estado do tema
-  if (body.classList.contains('light-mode')) {
-    localStorage.setItem(storageKey, 'light');
-  } else {
-    localStorage.removeItem(storageKey);
-  }
+    // Armazenar o estado do tema
+    if (body.classList.contains('light-mode')) {
+        localStorage.setItem(storageKey, 'light');
+    } else {
+        localStorage.removeItem(storageKey);
+    }
 });
 
 
@@ -176,9 +176,9 @@ let headerMenu = document.getElementById('header-menu');
 const hiddenSection = document.querySelectorAll('.hidden');
 
 const sections = [
-  { name: 'intro', class: 'introSec' },
-  { name: 'aboutme', class: 'aboutmeSec' },
-  { name: 'habilities', class: 'habilitiesSec' }
+    { name: 'intro', class: 'introSec' },
+    { name: 'aboutme', class: 'aboutmeSec' },
+    { name: 'habilities', class: 'habilitiesSec' }
 ];
 
 const observer = new IntersectionObserver((entries) => {
@@ -215,6 +215,7 @@ hiddenSection.forEach((el) => observer.observe(el));
 // Hover to View Text //
 // ================== //
 
+let description0 = document.getElementById('description0');
 
 function showText(elementHover) {
     let id = parseInt(elementHover.id.slice(7), 10);
