@@ -120,21 +120,197 @@ window.onload = function () {
 // Search Bar Slide //
 // ================ //
 
+  
+// document.addEventListener('DOMContentLoaded', function() {
+//     const projectList = document.getElementById('projects-list');
+//     const projectItems = document.querySelectorAll('#projects-list li');
+//     const searchBarInput = document.getElementById('search-bar-input');
+//     const noResultsMessage = document.getElementById('no-results-message');
+//     let header = document.querySelector('.header');
+  
+//     if (searchBarInput && header) {
+//         searchBarInput.addEventListener('focus', function() {
+//             header.classList.add('wide');
+//         });
+  
+//         searchBarInput.addEventListener('blur', function() {
+//             header.classList.remove('wide');
+//         });
+//     }
+  
+//     searchBarInput.addEventListener('input', function(event) {
+//         const searchValue = event.target.value.toLowerCase();
+//         let hasVisibleItems = false;
+    
+//         projectItems.forEach(function(item) {
+//             const title = item.querySelector('.project-title').textContent.toLowerCase();
+//             const description = item.querySelector('.project-description').textContent.toLowerCase();
+//             const link = item.querySelector('a');
+  
+//             if (searchValue === '') {
+//                 // Caso a barra de pesquisa esteja vazia, oculta todos os itens
+//                 item.style.display = 'none';
+//                 link.style.display = 'none';
+//             } else if (title.includes(searchValue) || description.includes(searchValue)) {
+//             // Se houver correspondência de pesquisa, exibe o item correspondente
+//                 item.style.display = 'block';
+//                 link.style.display = 'inline';
+//                 hasVisibleItems = true;
+//             } else {
+//                 // Caso contrário, oculta o item
+//                 item.style.display = 'none';
+//                 link.style.display = 'none';
+//             }
+//         });
+  
+//       // Atualiza o estilo da <ul> com base na visibilidade dos itens
+//         if (hasVisibleItems) {
+//             projectList.style.display = 'block';
+//             noResultsMessage.style.display = 'none';
+//         } else {
+//             projectList.style.display = 'none';
+//             if (searchValue !== '') {
+//                 // Exibe a mensagem "Nenhum resultado encontrado" apenas quando houver texto na barra de pesquisa
+//                 noResultsMessage.style.display = 'block';
+//             } else {
+//                 noResultsMessage.style.display = 'none';
+//             }
+//         }
+//     });
+  
+//     // Oculta todos os itens ao carregar a página inicialmente
+//     projectItems.forEach(function(item) {
+//         item.style.display = 'none';
+//     });
+//     noResultsMessage.style.display = 'none';
+// });
 
-let searchBarInput = document.getElementById('search-bar-input');
-let header = document.querySelector('.header');
 
 
-if (searchBarInput && header) {
-    searchBarInput.addEventListener('focus', function() {
-        header.classList.add('wide');
+const dictionary = {
+    item1: {
+        title: 'Django Ecommerce',
+        description: 'Ecommerce feito utilizando Python e o framework Django',
+        href: './projetos.html'
+    },
+    item2: {
+        title: 'GitHub',
+        description: 'Meu git',
+        href: './Social-links.html'
+    },
+    item3: {
+        title: 'Projeto',
+        description: 'Descrição do projeto',
+        href: './projetos.html'
+    },
+    // ... adicione mais itens ao dicionário
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projectList = document.getElementById('projects-list');
+    const searchBarInput = document.getElementById('search-bar-input');
+    const noResultsMessage = document.getElementById('no-results-message');
+    let header = document.querySelector('.header');
+
+    if (searchBarInput && header) {
+        searchBarInput.addEventListener('focus', function() {
+            header.classList.add('wide');
+        });
+
+        searchBarInput.addEventListener('blur', function() {
+            header.classList.remove('wide');
+        });
+    }
+
+    searchBarInput.addEventListener('input', function(event) {
+        const searchValue = event.target.value.toLowerCase();
+
+        // Remove todos os elementos da lista de projetos
+        while (projectList.firstChild) {
+            projectList.removeChild(projectList.firstChild);
+        }
+
+        let hasVisibleItems = false;
+
+        for (const key in dictionary) {
+            const item = dictionary[key];
+            const title = item.title;
+            const description = item.description;
+            const href = item.href;
+
+            if (searchValue === '' || title.toLowerCase().includes(searchValue) || description.toLowerCase().includes(searchValue)) {
+                const li = document.createElement('li');
+                const h2 = document.createElement('h2');
+                const p = document.createElement('p');
+                const a = document.createElement('a');
+
+                h2.classList.add('project-title');
+                p.classList.add('project-description');
+
+                h2.textContent = title;
+                p.textContent = description;
+                a.textContent = 'Ver mais';
+                a.href = href;
+
+                li.appendChild(h2);
+                li.appendChild(p);
+                li.appendChild(a);
+
+                projectList.appendChild(li);
+
+                hasVisibleItems = true;
+            }
+        }
+
+        // Atualiza a exibição da lista de projetos e da mensagem de "nenhum resultado encontrado"
+        if (searchValue !== '') {
+            projectList.style.display = hasVisibleItems ? 'block' : 'none';
+            noResultsMessage.style.display = hasVisibleItems ? 'none' : 'block';
+        } else {
+            projectList.style.display = 'none';
+            noResultsMessage.style.display = 'none';
+        }
     });
 
-    searchBarInput.addEventListener('blur', function() {
-        header.classList.remove('wide');
-    });
-}
+    // Oculta todos os itens ao carregar a página inicialmente
+    projectList.style.display = 'none';
+    noResultsMessage.style.display = 'none';
 
+    // Verifica se a barra de pesquisa está vazia ao carregar a página
+    if (searchBarInput.value === '') {
+        projectList.style.display = 'none';
+        noResultsMessage.style.display = 'none';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const options = {
+//             valueNames: ['project-title', 'project-description'],
+//     };
+    
+//     const projectList = new List('projects-list', options);
+    
+//     const searchBarInput = document.getElementById('search-bar-input');
+    
+//     searchBarInput.addEventListener('input', function(event) {
+//         const searchValue = event.target.value;
+//         projectList.search(searchValue);
+//     });
+// });
 
 // =============== //
 // Light-Dark Mode //
