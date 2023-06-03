@@ -461,6 +461,7 @@ body.light-mode .video-bg:before {
 
     flex-direction: column;
     justify-content: center;
+    height: 100%;
 
     /* 
   
@@ -646,9 +647,11 @@ section {
     border-radius: 20px;
 }
 
+
+
 .flip-card-front {
     background-color: var(--theme-bg-color);
-    background-image: var(--backgroundFade), url('./assets/landing-page.jpg');
+    /* background-image: var(--backgroundFade), url('./assets/landing-page.jpg'); */
     object-fit: cover;
     background-repeat: no-repeat;
 
@@ -658,6 +661,10 @@ section {
     border: none;
     background-position: center;
     background-size: cover;
+}
+
+.dominoh{
+    background-image: var(--backgroundFade), url('./assets/dominoh.jpg');
 }
 
 .flip-card-front h1 {

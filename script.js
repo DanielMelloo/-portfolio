@@ -126,25 +126,38 @@ const resultsList = {
         title: 'Django Ecommerce',
         description: 'Ecommerce feito utilizando Python e o framework Django\n \
             (Redireciona para o site onde está hospedado o projeto)',
-        href: 'https://danielmellodev.pythonanywhere.com'
+        href: 'https://danielmellodev.pythonanywhere.com',
+
     },
+
     item2: {
+        title: 'Dominoh',
+        description: 'Dominoh feito em HTML. CSS E JavaScript\n \
+            (Redireciona direto para o dominó)',
+        href: 'https://danielmelloo.github.io/Domino-game/',
+        target: '_blank',
+    },
+
+    item3: {
         title: 'Instagram',
         description: 'Meu instagram para projetos\n \
             (Redireciona direto para instagram)',
-        href: 'https://www.instagram.com/engenheiro_nao_dorme/'
+        href: 'https://www.instagram.com/engenheiro_nao_dorme/',
+        target: '_blank',
     },
-    item3: {
+    item4: {
         title: 'GitHub',
         description: 'Meu GitHub com os repositórios de projetos que fiz\n \
             (Redireciona direto para github)',
-        href: 'https://github.com/DanielMelloo'
+        href: 'https://github.com/DanielMelloo',
+        target: '_blank',
     },
-    item4: {
+    item5: {
         title: 'Linkedin',
         description: 'Meu Linkedin\n \
             (Redireciona direto para linkedin)',
-        href: 'https://www.linkedin.com/in/daniel-melloo-/'
+        href: 'https://www.linkedin.com/in/daniel-melloo-/',
+        target: '_blank',
     },
 };
 
@@ -224,6 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const title = item.title;
                 const description = item.description;
                 const href = item.href;
+                const target = item.target;
 
                 if (title.toLowerCase().includes(searchValue) || description.toLowerCase().includes(searchValue)) {
                     const li = document.createElement('li');
@@ -236,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     h2.textContent = title;
                     // a.textContent = 'Ver mais';
                     a.href = href;
+                    a.target = target;
 
                     div.appendChild(h2);
 
