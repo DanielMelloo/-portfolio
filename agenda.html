@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daniel Mello</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js'></script>
+    <script src="./particles/particles.js" defer></script>
+    <script src="./script.js" defer></script>
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="header">
+
+            <div class="menu-circle"></div>
+          
+            <div class="header-menu" id="headerMenu">
+              <a class="menu-link is-active" href="./index.html">Página Inicial</a>
+            </div>
+          
+            <div class="search-bar" id="search-bar">
+              <input id="search-bar-input" type="text" placeholder="Pesquisar">
+            </div>
+          
+            <button style="border: none;" class="dark-light">
+              <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+              </svg>
+            </button>
+          
+        </div>
+        
+        <div class="wrapper">
+
+            <div class="left-side">
+
+                <div class="side-wrapper">
+
+                    <div class="side-title">Principais</div>
+
+                    <div class="side-menu">
+
+                        <a href="index.html">
+
+                            <svg viewBox="0 0 512 512">
+                                <g xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                                    <path
+                                        d="M0 0h128v128H0zm0 0M192 0h128v128H192zm0 0M384 0h128v128H384zm0 0M0 192h128v128H0zm0 0"
+                                        data-original="#bfc9d1" />
+                                </g>
+                                <path xmlns="http://www.w3.org/2000/svg" d="M192 192h128v128H192zm0 0"
+                                    fill="currentColor" data-original="#82b1ff" />
+                                <path xmlns="http://www.w3.org/2000/svg"
+                                    d="M384 192h128v128H384zm0 0M0 384h128v128H0zm0 0M192 384h128v128H192zm0 0M384 384h128v128H384zm0 0"
+                                    fill="currentColor" data-original="#bfc9d1" />
+                            </svg>
+                            Página Inicial
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="side-wrapper">
+
+                    <div class="side-title">Categorias</div>
+
+                    <div class="side-menu">
+
+                        <a href="projetos.html">
+
+                            <svg viewBox="0 0 512 512" fill="currentColor">
+                                <circle cx="295.099" cy="327.254" r="110.96" transform="rotate(-45 295.062 327.332)" />
+                                <path
+                                    d="M471.854 338.281V163.146H296.72v41.169a123.1 123.1 0 01121.339 122.939c0 3.717-.176 7.393-.5 11.027zM172.14 327.254a123.16 123.16 0 01100.59-120.915L195.082 73.786 40.146 338.281H172.64c-.325-3.634-.5-7.31-.5-11.027z" />
+                            </svg>
+                            Projetos
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="side-wrapper">
+
+                    <div class="side-title">Contatos</div>
+
+                    <div class="side-menu">
+
+                        <a href="https://www.instagram.com/engenheiro_nao_dorme" target="_blank" rel="noopener noreferrer">
+                            <img class="icons" src="icons/instagram-icon.png" alt="Instagram">
+                            Instagram
+                        </a>
+
+
+                        <a href="https://github.com/DanielMelloo" target="_blank" rel="noopener noreferrer">
+                            <img class="icons" src="icons/github-icon.png" alt="GitHub">
+                            GitHub
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/daniel-melloo-/" target="_blank" rel="noopener noreferrer">
+                            <img class="icons" src="icons/linkedin-icon.png" alt="Linkedin">
+                            Linkedin
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="main-container">
+
+                <div id="no-results-message-outter">
+                    <p id="no-results-message">Nenhum resultado encontrado</p>
+                </div>
+                <ul id="projects-list"></ul>
+
+
+                <div class="main-header" id="header-menu">
+                    <!-- <a class="menu-link-main" href="#">Página Inicial</a> -->
+                    <div class="header-menu">
+                        <a class="main-header-link is-active" href="#">Destaques</a>
+                        <a class="main-header-link" href="#">Todos</a>
+                        <!-- <a class="main-header-link" href="#">Recursos Adicionais</a> -->
+                    </div>
+
+                </div>
+
+                <div class="main-content" id="calendar-main">
+
+                    <iframe 
+                        id="calendar"
+                        src="https://calendar.google.com/calendar/embed?src=corshark.nfa%40gmail.com&ctz=America%2FSao_Paulo"
+                        style="border: 0"
+                        width="800"
+                        height="600"
+                        frameborder="0"
+                        scrolling="no">
+                    </iframe>
+                     
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <canvas class="background"></canvas>
+    
+</body>
+
+</html>
